@@ -128,16 +128,16 @@ export default function RecruitmentPageClient() {
                     Explaining PE – M&I
                   </a>
                   <a
-                    href="https://corporatefinanceinstitute.com/resources/career/finance-interview-questions/"
-                    className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
-                  >
-                    Common Finance Interview Qs
-                  </a>
-                  <a
                     href="https://www.wsj.com/"
                     className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
                   >
                     Current Events
+                  </a>
+                  <a
+                    href="https://corporatefinanceinstitute.com/resources/career/finance-interview-questions/"
+                    className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                  >
+                    Common Finance Interview Qs
                   </a>
                   <a
                     href="https://www.morningbrew.com/"
