@@ -2,7 +2,7 @@
 slug: sarah-reiley
 name: Sarah Reiley
 role: President, Founder
-headshot: /people/sarah.png
+headshot: /people/sarah.JPG
 email: slr252@cornell.edu
 major: ILR
 gradYear: 2027
