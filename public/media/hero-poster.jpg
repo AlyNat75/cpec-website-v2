@@ -1,0 +1,13 @@
+# TODO: Replace this file with your actual hero video poster image (optional)
+# 
+# This is an optional placeholder image that shows while the video loads.
+# If not provided, the video will just show a black screen while loading.
+# 
+# File should be placed at: /public/media/hero-poster.jpg
+# 
+# Recommended specs:
+# - JPG format for smaller file size
+# - Same aspect ratio as your video
+# - Resolution: 1920x1080 or matching your video
+# - Should be a representative frame from your video
+# - File size: Keep under 500KB

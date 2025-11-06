@@ -1,26 +1,25 @@
-@import "tailwindcss";
+/* app/globals.css */
+@import "tailwindcss";  /* v4: loads preflight + utilities */
 
+/* Your site tokens (edit as you like) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --nav-height: 80px;
+  --brand-dark: rgb(15, 23, 42);
+  --brand-red: #D61F26;
+  --container: 72rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Neutral defaults; Tailwind classes override these */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: rgb(17, 24, 39);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  scroll-padding-top: calc(var(--nav-height) + 0.5rem);
 }
+
+/* Utilities to bind next/font variables to classes */
+.font-heading { font-family: var(--font-heading), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+.font-body { font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
