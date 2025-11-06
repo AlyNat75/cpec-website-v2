@@ -11,8 +11,7 @@ workExperience:
   - Boston Consulting Group
 campusInvolvements:
   - Cornell Rocketry Team
-  - Cornell Blockchain
-  - Cornell Club Hockey
+  - Club Hockey
 ---
 
 
