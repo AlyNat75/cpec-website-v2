@@ -15,8 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CPEC - Cornell Finance Club",
-  description: "Cornell University's Premier Finance Organization",
+  title: "CPEC - Cornell Private Equity Club",
+  description: "Cornell University's only undergraduate organization devoted exclusively to private equity",
 };
 
 export default function RootLayout({
