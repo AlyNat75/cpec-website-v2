@@ -190,7 +190,7 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
           {/* Top bar */}
           <div className="flex items-center justify-between px-6" style={{ height: "var(--nav-height)" }}>
             <Link href="/" aria-label="CPEC Home" onClick={closeMobileAll} className="flex items-center">
-              <Image src="/assets/cpec-logo-dark.svg" alt="CPEC Logo" width={170} height={170} priority />
+              <Image src="/assets/cpec-logo-dark3.png" alt="CPEC Logo" width={170} height={170} priority />
             </Link>
             <button
               type="button"
