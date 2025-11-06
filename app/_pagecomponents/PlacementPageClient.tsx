@@ -1,60 +1,63 @@
 "use client";
 
-import Image from "next/image";
 import NavBar from "../_components/NavBar";
-import { useEffect, useRef, useState } from "react";
 import Footer from "../_components/Footer";
+import { useEffect, useRef, useState } from "react";
 
 type LogoRow = string[];
 
+// —————————————————————————————————————————————
+// DATA
+// —————————————————————————————————————————————
+
 const LOGOS: string[] = [
-  // Row 1
   "/placement/cpec_blackrock.jpg",
   "/placement/cpec_lazard.png",
   "/placement/cpec_ares.png",
   "/placement/cpec_jpm.png",
 
-  // Row 2
   "/placement/cpec_centerview.png",
   "/placement/cpec_citi.png",
   "/placement/cpec_barclays.svg",
   "/placement/cpec_goldman.png",
 
-  // Row 3
   "/placement/cpec_wellsfargo.png",
   "/placement/cpec_ubs.png",
   "/placement/cpec_rbc.png",
   "/placement/cpec_rothschild.png",
 
-  // Row 4
   "/placement/cpec_soloman.png",
   "/placement/cpec_bcg.jpg",
   "/placement/cpec_tishman.jpg",
   "/placement/cpec_macquarie.png",
 ];
 
-// Per-logo tweaks (use arbitrary scales so Tailwind v4 keeps them)
+// Keep editing these. Bigger number => bigger logo.
+// We map this cleanly to pixel max-heights (no transforms).
 const SCALE_OVERRIDES: Record<string, string> = {
-  // Looked small → scale up
-  "/placement/cpec_barclays.svg": "scale-[1.8]",
-  "/placement/cpec_centerview.png": "scale-[1.3]",
-  "/placement/cpec_rbc.png": "scale-[1.4]",
-  "/placement/cpec_rothschild.png": "scale-[1.3]",
-  "/placement/cpec_tishman.jpg": "scale-[1.7]",
-  "/placement/cpec_wellsfargo.png": "scale-[1.4]",
-  "/placement/cpec_citi.png": "scale-[1.15]",
-  "/placement/cpec_bcg.jpg": "scale-[1.2]",
-  "/placement/cpec_blackrock.jpg": "scale-[1.1]",
+  "/placement/cpec_barclays.svg": "scale-[6.0]",
+  "/placement/cpec_centerview.png": "scale-[4.0]",
+  "/placement/cpec_rbc.png": "scale-[4.2]",
+  "/placement/cpec_rothschild.png": "scale-[3.2]",
+  "/placement/cpec_tishman.jpg": "scale-[10.0]",
+  "/placement/cpec_wellsfargo.png": "scale-[4.2]",
+  "/placement/cpec_citi.png": "scale-[3.5]",
+  "/placement/cpec_bcg.jpg": "scale-[3.0]",
+  "/placement/cpec_blackrock.jpg": "scale-[5.0]",
 
-  // Looked large → scale down
-  "/placement/cpec_lazard.png": "scale-[0.85]",
-  "/placement/cpec_jpm.png": "scale-[0.85]",
+  "/placement/cpec_lazard.png": "scale-[1.2]",
+  "/placement/cpec_jpm.png": "scale-[1.5]",
   "/placement/cpec_kpmg.png": "scale-[0.7]",
-  "/placement/cpec_macquarie.png": "scale-[0.95]",
-  "/placement/cpec_ubs.png": "scale-[0.8]",
-  "/placement/cpec_soloman.png": "scale-[0.9]",
-  "/placement/cpec_ares.png": "scale-[0.75]",
+  "/placement/cpec_macquarie.png": "scale-[1.5]",
+  "/placement/cpec_ubs.png": "scale-[2.0]",
+  "/placement/cpec_soloman.png": "scale-[1.3]",
+  "/placement/cpec_ares.png": "scale-[1.7]",
+  "/placement/cpec_goldman.png": "scale-[1.2]",
 };
+
+// —————————————————————————————————————————————
+// HELPERS
+// —————————————————————————————————————————————
 
 function chunkIntoRows(items: string[], size: number): LogoRow[] {
   const rows: LogoRow[] = [];
@@ -62,6 +65,26 @@ function chunkIntoRows(items: string[], size: number): LogoRow[] {
   return rows;
 }
 
+// Convert "scale-[x]" -> mobile/desktop max-heights in px.
+// No transforms; we just clamp pixel heights so Safari renders identically.
+function heightsFor(src: string) {
+  const raw = SCALE_OVERRIDES[src];
+  const m = raw?.match(/scale-\[([0-9.]+)\]/);
+  const factor = m ? parseFloat(m[1]) : 1;
+
+  // Baselines that look good in your layout.
+  const mobileBase = 60;   // px inside a ~3:1 card on phones
+  const desktopBase = 88;  // px inside a ~3:1 card on md+
+
+  // Multiply and clamp to keep things sane
+  const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
+  const mobile = clamp(mobileBase * factor, 38, 140);
+  const desktop = clamp(desktopBase * factor, 52, 180);
+
+  return { mobile, desktop };
+}
+
+// —————————————————————————————————————————————
 export default function PlacementPageClient() {
   return (
     <>
@@ -72,16 +95,17 @@ export default function PlacementPageClient() {
         className="relative w-full overflow-hidden"
         style={{ height: "68vh", minHeight: "380px", maxHeight: "680px" }}
       >
-        <Image
+        <img
           src="/media/cpec_placementbanner.jpg"
           alt="City skyline banner"
-          fill
-          priority
-          className="object-cover brightness-[.7] saturate-110"
+          className="absolute inset-0 h-full w-full object-cover"
+          decoding="async"
+          loading="eager"
         />
-        {/* FIX: gradient utility */}
-        <div className="absolute inset-0 bg-linear-to-t from-black/35 to-transparent" />
-
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to top, rgba(0,0,0,.35), transparent)" }}
+        />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
           <h1
             className="text-white font-extrabold uppercase tracking-wide text-5xl md:text-7xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
@@ -99,30 +123,34 @@ export default function PlacementPageClient() {
       <section className="mx-auto w-full max-w-7xl px-6 py-16 md:py-20">
         <AnimatedLogoGrid rows={chunkIntoRows(LOGOS, 4)} />
       </section>
+
       <Footer />
     </>
   );
 }
 
+// —————————————————————————————————————————————
+// ANIMATED ROWS
+// —————————————————————————————————————————————
 function AnimatedLogoGrid({ rows }: { rows: LogoRow[] }) {
   const rowRefs = useRef<HTMLDivElement[]>([]);
   const [visible, setVisible] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const idx = Number((entry.target as HTMLElement).dataset.rowIndex);
           if (entry.isIntersecting) {
-            setVisible((v) => ({ ...v, [idx]: true }));
-            observer.unobserve(entry.target);
+            setVisible((v) => (v[idx] ? v : { ...v, [idx]: true }));
+            obs.unobserve(entry.target);
           }
         });
       },
       { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
     );
-    rowRefs.current.forEach((el) => el && observer.observe(el));
-    return () => observer.disconnect();
+    rowRefs.current.forEach((el) => el && obs.observe(el));
+    return () => obs.disconnect();
   }, []);
 
   return (
@@ -141,7 +169,7 @@ function AnimatedLogoGrid({ rows }: { rows: LogoRow[] }) {
           style={{ transitionDelay: `${rowIdx * 60}ms` }}
         >
           {row.map((src, i) => (
-            <LogoCard key={i} src={src} />
+            <LogoCard key={`${src}-${i}`} src={src} />
           ))}
         </div>
       ))}
@@ -149,26 +177,45 @@ function AnimatedLogoGrid({ rows }: { rows: LogoRow[] }) {
   );
 }
 
+// —————————————————————————————————————————————
+// STABLE, SAFARI-PROOF LOGO CARD
+// —————————————————————————————————————————————
 function LogoCard({ src }: { src: string }) {
+  const { mobile, desktop } = heightsFor(src);
+
   return (
     <div
-      className="relative bg-white rounded-xl shadow-sm ring-1 ring-black/5 overflow-hidden hover:shadow-md hover:translate-y-px transition"
+      className="relative rounded-xl bg-white shadow-sm transition hover:shadow-md overflow-hidden"
+      // fixed ratio card; no absolute positioning inside
       style={{ aspectRatio: "3 / 1" }}
     >
-      <div
-        className={`absolute inset-0 flex items-center justify-center p-6 md:p-8 ${
-          SCALE_OVERRIDES[src] ?? ""
-        }`}
-      >
-        <Image
+      {/* Use flexbox to center the image; ensures perfect vertical centering */}
+      <div className="flex h-full w-full items-center justify-center p-4 md:p-8 relative z-0">
+        {/* Mobile image */}
+        <img
           src={src}
           alt="Placement partner logo"
-          fill
-          className="object-contain"
-          sizes="(max-width: 640px) 45vw, (max-width: 1024px) 22vw, 320px"
-          priority={false}
+          decoding="async"
+          loading="lazy"
+          className="block h-auto w-auto max-w-full max-h-full object-contain md:hidden"
+          style={{
+            maxHeight: `${mobile}px`,
+          }}
+        />
+        {/* Desktop image */}
+        <img
+          src={src}
+          alt="Placement partner logo"
+          decoding="async"
+          loading="lazy"
+          className="hidden md:block h-auto w-auto max-w-full max-h-full object-contain"
+          style={{
+            maxHeight: `${desktop}px`,
+          }}
         />
       </div>
+      {/* Border overlay - appears on top of logo background */}
+      <div className="absolute inset-0 rounded-xl border border-black/5 pointer-events-none z-10" />
     </div>
   );
 }

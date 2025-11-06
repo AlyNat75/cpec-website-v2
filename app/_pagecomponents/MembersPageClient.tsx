@@ -32,59 +32,98 @@ export default function MembersPageClient({ groups }: { groups: Group[] }) {
 }
 
 function AnimatedGroups({ groups }: { groups: Group[] }) {
-  const groupRefs = useRef<HTMLDivElement[]>([]);
-  const [visible, setVisible] = useState<Record<number, boolean>>({});
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const idx = Number((entry.target as HTMLElement).dataset.groupIndex);
-          if (entry.isIntersecting) {
-            setVisible((v) => ({ ...v, [idx]: true }));
-            observer.unobserve(entry.target);
-          }
+    const groupRefs = useRef<HTMLDivElement[]>([]);
+    const [visible, setVisible] = useState<Record<number, boolean>>({});
+  
+    useEffect(() => {
+      // idempotent reveal
+      const reveal = (idx: number) =>
+        setVisible((v) => (v[idx] ? v : { ...v, [idx]: true }));
+  
+      // IntersectionObserver (mobile-friendly)
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const idx = Number((entry.target as HTMLElement).dataset.groupIndex);
+            if (entry.isIntersecting) {
+              reveal(idx);
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0, rootMargin: "0px 0px -20% 0px" }
+      );
+  
+      // observe all current refs
+      groupRefs.current.forEach((el) => el && io.observe(el));
+  
+      // Fallback for iOS momentum scroll
+      const onScrollFallback = () => {
+        const vh = window.innerHeight || 0;
+        groupRefs.current.forEach((el, idx) => {
+          if (!el) return;
+          const rect = el.getBoundingClientRect();
+          if (rect.top < vh * 0.9) reveal(idx);
         });
-      },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
-    );
-    groupRefs.current.forEach((el) => el && observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <section className="mx-auto w-full max-w-7xl px-6 py-16 md:py-20 space-y-16 text-center">
-      {groups.map((g, idx) => (
-        <div
-          key={`${g.label}-${idx}`}
-          data-group-index={idx}
-          ref={(el) => {
-            if (el) groupRefs.current[idx] = el;
-          }}
-          className={[
-            "transition-all duration-700 ease-out",
-            visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
-          ].join(" ")}
-        >
-          <h2 className="mb-8 text-2xl md:text-3xl font-semibold">{g.label}</h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            {g.people.map((p, i) => (
-              <div
-                key={p.href}
-                className={[
-                  "w-full max-w-xs sm:w-[260px] transition-all duration-700",
-                  visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
-                ].join(" ")}
-                style={{ transitionDelay: `${100 + i * 60}ms` }}
-              >
-                <PersonCard {...p} />
-              </div>
-            ))}
+      };
+  
+      // Re-observe on resize/orientation
+      const onResize = () => {
+        groupRefs.current.forEach((el) => el && io.observe(el));
+        onScrollFallback();
+      };
+  
+      window.addEventListener("scroll", onScrollFallback, { passive: true });
+      window.addEventListener("resize", onResize, { passive: true });
+      window.addEventListener("orientationchange", onResize);
+  
+      // kick once
+      onScrollFallback();
+  
+      return () => {
+        io.disconnect();
+        window.removeEventListener("scroll", onScrollFallback);
+        window.removeEventListener("resize", onResize);
+        window.removeEventListener("orientationchange", onResize);
+      };
+      // IMPORTANT: keep deps array static so its size/order never changes
+    }, []); // ← fixed
+  
+    return (
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 md:py-20 space-y-16 text-center">
+        {groups.map((g, idx) => (
+          <div
+            key={`${g.label}-${idx}`}
+            data-group-index={idx}
+            ref={(el) => {
+              if (el) groupRefs.current[idx] = el;
+            }}
+            className={[
+              "transition-all duration-700 ease-out will-change-transform",
+              visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
+            ].join(" ")}
+          >
+            <h2 className="mb-8 text-2xl md:text-3xl font-semibold">{g.label}</h2>
+            <div className="flex flex-wrap justify-center gap-6">
+              {g.people.map((p, i) => (
+                <div
+                  key={p.href}
+                  className={[
+                    "w-full max-w-xs sm:w-[260px] transition-all duration-700 will-change-transform",
+                    visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
+                  ].join(" ")}
+                  style={{ transitionDelay: visible[idx] ? `${100 + i * 60}ms` : "0ms" }}
+                >
+                  <PersonCard {...p} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </section>
-  );
-}
+        ))}
+      </section>
+    );
+  }
+  
+  
 
 

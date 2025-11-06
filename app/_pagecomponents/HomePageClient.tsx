@@ -229,7 +229,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-4 md:hidden">
               <div className="relative aspect-4/3 rounded-xl overflow-hidden shadow-md ring-1 ring-black/5">
                 <Image
-                  src="/media/eboard_social.jpeg"
+                  src="/media/eboard_social2.png"
                   alt="CPEC e-board social"
                   fill
                   className="object-cover"
