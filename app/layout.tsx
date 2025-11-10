@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"; 
 
 const montserrat = Montserrat({
   variable: "--font-heading",
@@ -16,7 +17,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "CPEC - Cornell Private Equity Club",
-  description: "Cornell University's only undergraduate organization devoted exclusively to private equity",
+  description:
+    "Cornell University's only undergraduate organization devoted exclusively to private equity",
 };
 
 export default function RootLayout({
@@ -26,10 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.variable} ${inter.variable} antialiased`}
-      >
+      <body className={`${montserrat.variable} ${inter.variable} antialiased`}>
         {children}
+        <Analytics /> 
       </body>
     </html>
   );
