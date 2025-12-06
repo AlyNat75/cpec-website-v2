@@ -8,7 +8,7 @@ major: Applied Economics & Management
 gradYear: 2027
 order: 6
 workExperience:
-  - Tudor Investment Corporation
+  - Millennium
 campusInvolvements:
   - DUC
   - CJL
