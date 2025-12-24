@@ -6,7 +6,7 @@ headshot: /people/jane.png
 email: jpa79@cornell.edu
 major: ILR
 gradYear: 2027
-order: 3
+order: 4
 workExperience:
   - Citibank
 campusInvolvements:

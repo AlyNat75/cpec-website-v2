@@ -108,6 +108,8 @@ export function getAllPeople(): Person[] {
 const EBOARD_TITLES = [
   "President, Founder",
   "Vice President, Founder",
+  "Co-Founder",
+  "Co-President",
   "Co-VP of NME",
   "VP of DEI",
   "Co-VP of Recruitment",

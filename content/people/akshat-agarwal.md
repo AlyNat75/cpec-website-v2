@@ -6,7 +6,7 @@ headshot: /people/akshat.png
 email: aga55@cornell.edu
 major: ORIE
 gradYear: 2027
-order: 4
+order: 5
 workExperience:
   - Solomon Partners
 campusInvolvements:
