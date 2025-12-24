@@ -1,6 +1,6 @@
 ---
 slug: moksh-patel
-name: moksh-patel
+name: Moksh Patel
 role: Co-President
 headshot: /people/moksh.png
 email: mp2349@cornell.edu
