@@ -1,12 +1,11 @@
 ---
 slug: gavin-hakimian
 name: Gavin Hakimian
-role: Co-VP of Recruitment
+role: Member
 headshot: /people/gavin.png
 email: gh438@cornell.edu
 major: Applied Economics & Management
 gradYear: 2027
-order: 6
 workExperience:
   - Millennium
 campusInvolvements:

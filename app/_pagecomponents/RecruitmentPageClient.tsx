@@ -63,7 +63,9 @@ export default function RecruitmentPageClient() {
               Application Form
             </a>
             <a
-              href="#"
+              href="https://docs.google.com/forms/d/1KON4bTsL5TKlfGOULErgSR6O7CXOr85KgRwGELmq7-w/viewform?edit_requested=true"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-[#1d4480] px-7 py-3.5 text-white text-sm md:text-base font-medium shadow-sm hover:opacity-90 transition"
             >
               Coffee Chat Request

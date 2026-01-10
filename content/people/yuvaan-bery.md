@@ -1,11 +1,12 @@
 ---
 slug: yuvaan-bery
 name: Yuvaan Bery
-role: Member
-headshot: /people/yuvaan.png
+role: Co-VP of Recruitment
+headshot: /people/yuvaan2.png
 email: yb289@cornell.edu
 major: Economics & Government
 gradYear: 2027
+order: 6
 workExperience:
   - Goldman Sachs
 campusInvolvements:

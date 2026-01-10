@@ -1,12 +1,11 @@
 ---
 slug: jane-alto
 name: Jane Alto
-role: Treasurer
+role: Member
 headshot: /people/jane.png
 email: jpa79@cornell.edu
-major: ILR
+major: Industrial Labor Relations
 gradYear: 2027
-order: 4
 workExperience:
   - Citibank
 campusInvolvements:

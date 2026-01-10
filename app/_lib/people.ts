@@ -118,7 +118,9 @@ const EBOARD_TITLES = [
   "VP of Professional Relations",
   "VP of Marketing",
   "VP of Membership",
-  "Co-VP of Professional Development"
+  "VP of Internal Affairs",
+  "VP of Finance",
+  "VP of Professional Development"
 ];
 
 export function getExecutiveBoard(): Person[] {

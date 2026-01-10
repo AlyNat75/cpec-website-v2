@@ -6,7 +6,7 @@ headshot: /people/davis3.png
 email: dei22@cornell.edu
 major: Applied Economics & Management
 gradYear: 2027
-order: 5
+order: 4
 workExperience:
   - Rothschild & Co.
 campusInvolvements:

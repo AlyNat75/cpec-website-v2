@@ -1,13 +1,14 @@
 ---
 slug: alex-wing
 name: Alex Wing
-role: Member
+role: Co-VP of Recruitment
 headshot: /people/alex.png
 email: ahw86@cornell.edu
 major: Applied Economics & Management
 gradYear: 2028
+order: 5
 workExperience:
-  - Morgan Stanley Wealth Management
+  - StepStone Group
 campusInvolvements:
   - Cayuga Capital
   - History Society

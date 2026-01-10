@@ -1,12 +1,11 @@
 ---
 slug: saniya-kalra
 name: Saniya Kalra
-role: Co-VP of Recruitment
+role: Member
 headshot: /people/saniya.png
 email: sk2797@cornell.edu
-major: Hotel
+major: Hotel Administration
 gradYear: 2027
-order: 7
 workExperience:
   - Lazard (PCA Real Assets)
 campusInvolvements:

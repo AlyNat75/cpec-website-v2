@@ -1,11 +1,12 @@
 ---
 slug: rahil-dundon
 name: Rahil Dundon
-role: Member
+role: VP of Professional Relations
 headshot: /media/cpec_placementbanner.jpg
 email: rid29@cornell.edu
 major: Applied Economics & Management
 gradYear: 2027
+order: 12
 workExperience:
   - Citibank
 campusInvolvements:

@@ -1,12 +1,11 @@
 ---
 slug: charlotte-cohen
 name: Charlotte Cohen
-role: Co-Founder
+role: Member
 headshot: /people/charlotte.png
 email: csc265@cornell.edu
-major: ILR
+major: Industrial Labor Relations
 gradYear: 2027
-order: 4
 workExperience:
   - Willkie Farr & Gallagher LLP
 campusInvolvements:
