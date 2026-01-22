@@ -115,7 +115,7 @@ const EBOARD_TITLES = [
   "Co-VP of Recruitment",
   "Social Chair",
   "Treasurer",
-  "VP of Professional Relations",
+  "VP of Public Relations",
   "VP of Marketing",
   "VP of Membership",
   "VP of Internal Affairs",

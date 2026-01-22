@@ -7,14 +7,14 @@ import { useEffect, useRef, useState } from "react";
 
 /* ---------- Timeline data (chronological) ---------- */
 const EVENTS: { date: string; title: string; location?: string }[] = [
-  { date: "Wed 09/03", title: "Breaking Into Private Equity", location: "Statler 398" },
-  { date: "Mon 09/08", title: "Information Session #1; Applications Open", location: "Statler 396" },
-  { date: "Sat 09/13", title: "Club Fest", location: "Arts Quad" },
-  { date: "Mon 09/15", title: "Resume Review & Open Coffee Chats", location: "Statler 398" },
-  { date: "Fri 09/19", title: "Applications Due 11:59 PM", location: "Online" },
-  { date: "Tue 09/16", title: "Information Session #2", location: "Statler 396" },
-  { date: "Sat 09/20", title: "Round 1 Interviews [Invite Only]", location: "TBD" },
-  { date: "Mon 09/22", title: "Round 2 Interviews [Invite Only]", location: "TBD" },
+  { date: "Mon 01/26", title: "Information Session 1", location: "TBD" },
+  { date: "Tue 01/27", title: "Women on Wall Street Panel", location: "Kennedy 116" },
+  { date: "Wed 01/28", title: "Breaking into Private Equity", location: "TBD" },
+  { date: "Thu 01/29", title: "Information Session 2", location: "TBD" },
+  { date: "Fri 01/30", title: "Resume Review & Open Coffee Chats", location: "TBD" },
+  { date: "Sat 01/31", title: "Applications due at 11:59 pm", location: "Online" },
+  { date: "Tue 02/03", title: "Round 1 Interviews [Invite Only]", location: "TBD" },
+  { date: "Thu 02/05", title: "Round 2 Interviews [Invite Only]", location: "TBD" },
 ];
 
 export default function RecruitmentPageClient() {
@@ -163,7 +163,7 @@ export default function RecruitmentPageClient() {
       {/* Timeline (alternating, staggered) */}
       <section className="mx-auto w-full max-w-7xl px-6 pb-20 md:pb-28" ref={timelineRef}>
         <h2 className={["text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F1A2E] transition-all duration-700", showTimeline ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
-          Fall 2025 Recruitment Timeline
+          Spring 2026 Recruitment Timeline
         </h2>
 
         {/* Rail + alternating grid */}
@@ -187,7 +187,7 @@ export default function RecruitmentPageClient() {
         </div>
 
         <p className="mt-8 text-center text-sm text-neutral-500">
-          *Subject to change. Final details will be posted here and on our socials.
+          *Subject to change. Room details will be posted on our socials.
         </p>
       </section>
 
