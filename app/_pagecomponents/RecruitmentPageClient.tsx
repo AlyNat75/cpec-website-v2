@@ -52,12 +52,14 @@ export default function RecruitmentPageClient() {
       <section className="mx-auto w-full max-w-7xl px-6 pt-24 md:pt-32" ref={topRef}>
         <div className={["rounded-3xl border border-neutral-200/80 bg-white px-8 py-10 md:px-14 md:py-14 text-center shadow-sm transition-all duration-700 ease-out", showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0F1A2E]">
-            Spring 2026 Recruitment Info Coming Soon!
+            Spring 2026 Recruitment
           </h1>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 md:gap-8">
             <a
-              href="#"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScD6Ie2uEVohHbrwncL9bRe2ffRRC_BfQGbYkM7_pjmsRbLVw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-[#1d4480] px-7 py-3.5 text-white text-sm md:text-base font-medium shadow-sm hover:opacity-90 transition"
             >
               Application Form
