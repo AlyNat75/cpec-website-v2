@@ -6,7 +6,7 @@ headshot: /people/steven.png
 email: smt266@cornell.edu
 major: Applied Economics & Management
 gradYear: 2027
-order: 13
+order: 14
 workExperience:
   - Centerview
 campusInvolvements:

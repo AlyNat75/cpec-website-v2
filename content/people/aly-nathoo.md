@@ -1,7 +1,7 @@
 ---
 slug: aly-nathoo
 name: Aly Nathoo
-role: Social Chair
+role: Co-VP of Social Events
 headshot: /people/aly.png
 email: an546@cornell.edu
 major: Computer Science

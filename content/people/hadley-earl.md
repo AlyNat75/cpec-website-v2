@@ -8,7 +8,7 @@ major: Hotel
 gradYear: 2028
 order: 10
 workExperience:
-  - Girls Who Invest Summer Intensive Program
+  - Morgan Stanley
 campusInvolvements:
   - CREDIT
 ---

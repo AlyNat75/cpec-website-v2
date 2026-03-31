@@ -30,6 +30,11 @@ const LOGOS: string[] = [
   "/placement/cpec_bcg.jpg",
   "/placement/cpec_tishman.jpg",
   "/placement/cpec_millennium.png",
+
+  "/placement/cpec_jefferies.svg",
+  "/placement/cpec_bofa.png",
+  "/placement/cpec_ms.png",
+  "/placement/cpec_macquarie.png",
 ];
 
 // Keep editing these. Bigger number => bigger logo.
@@ -53,6 +58,9 @@ const SCALE_OVERRIDES: Record<string, string> = {
   "/placement/cpec_soloman.png": "scale-[1.3]",
   "/placement/cpec_ares.png": "scale-[1.7]",
   "/placement/cpec_goldman.png": "scale-[1.2]",
+  "/placement/cpec_bofa.png": "scale-[4.5]",
+  "/placement/cpec_ms.png": "scale-[3.5]",
+  "/placement/cpec_jefferies.svg": "scale-[0.8]",
 };
 
 // —————————————————————————————————————————————

@@ -113,7 +113,7 @@ const EBOARD_TITLES = [
   "Co-VP of NME",
   "VP of DEI",
   "Co-VP of Recruitment",
-  "Social Chair",
+  "Co-VP of Social Events",
   "Treasurer",
   "VP of Public Relations",
   "VP of Marketing",

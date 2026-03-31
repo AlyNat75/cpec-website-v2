@@ -7,6 +7,8 @@ email: mp2349@cornell.edu
 major: Hotel Administration
 gradYear: 2028
 order: 2
+workExperience:
+  - Barclays
 campusInvolvements:
   -  Alpine Ski Team
 ---
