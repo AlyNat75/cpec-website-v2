@@ -5,12 +5,10 @@ role: Member
 headshot: /people/jodi.png
 email: jlp362@cornell.edu
 major: Communications
-gradYear: 2026
+gradYear: Alumni
 workExperience:
   - Alpine Investors
 campusInvolvements:
   - Track and Field
   - Banking at Cornell
 ---
-
-

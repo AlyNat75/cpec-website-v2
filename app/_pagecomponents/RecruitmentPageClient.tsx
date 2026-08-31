@@ -7,14 +7,15 @@ import { useEffect, useRef, useState } from "react";
 
 /* ---------- Timeline data (chronological) ---------- */
 const EVENTS: { date: string; title: string; location?: string }[] = [
-  { date: "Mon 01/26", title: "Information Session 1", location: "TBD" },
-  { date: "Tue 01/27", title: "Women on Wall Street Panel", location: "Kennedy 116" },
-  { date: "Wed 01/28", title: "Breaking into Private Equity", location: "TBD" },
-  { date: "Thu 01/29", title: "Information Session 2", location: "TBD" },
-  { date: "Fri 01/30", title: "Resume Review & Open Coffee Chats", location: "TBD" },
-  { date: "Sat 01/31", title: "Applications due at 11:59 pm", location: "Online" },
-  { date: "Tue 02/03", title: "Round 1 Interviews [Invite Only]", location: "TBD" },
-  { date: "Thu 02/05", title: "Round 2 Interviews [Invite Only]", location: "TBD" },
+  { date: "Monday, Sept 2",    title: "Applications Open" },
+  { date: "Thursday, Sept 3",  title: "Breaking Into Professional Clubs" },
+  { date: "Saturday, Sept 5",  title: "Club Fest" },
+  { date: "Monday, Sept 8",    title: "Information Session #1" },
+  { date: "Thursday, Sept 10", title: "Resume Review" },
+  { date: "Tuesday, Sept 15",  title: "Information Session #2" },
+  { date: "Wednesday, Sept 16",title: "Applications Due 11:59PM" },
+  { date: "Thursday, Sept 17", title: "Round 1 [Invite Only]" },
+  { date: "Friday, Sept 18",   title: "Round 2 [Invite Only]" },
 ];
 
 export default function RecruitmentPageClient() {
@@ -52,18 +53,10 @@ export default function RecruitmentPageClient() {
       <section className="mx-auto w-full max-w-7xl px-6 pt-24 md:pt-32" ref={topRef}>
         <div className={["rounded-3xl border border-neutral-200/80 bg-white px-8 py-10 md:px-14 md:py-14 text-center shadow-sm transition-all duration-700 ease-out", showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0F1A2E]">
-            Spring 2026 Recruitment
+            Fall 2026 Recruitment
           </h1>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 md:gap-8">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScD6Ie2uEVohHbrwncL9bRe2ffRRC_BfQGbYkM7_pjmsRbLVw/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#1d4480] px-7 py-3.5 text-white text-sm md:text-base font-medium shadow-sm hover:opacity-90 transition"
-            >
-              Application Form
-            </a>
             <a
               href="https://docs.google.com/forms/d/1KON4bTsL5TKlfGOULErgSR6O7CXOr85KgRwGELmq7-w/viewform?edit_requested=true"
               target="_blank"
@@ -165,7 +158,7 @@ export default function RecruitmentPageClient() {
       {/* Timeline (alternating, staggered) */}
       <section className="mx-auto w-full max-w-7xl px-6 pb-20 md:pb-28" ref={timelineRef}>
         <h2 className={["text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F1A2E] transition-all duration-700", showTimeline ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
-          Spring 2026 Recruitment Timeline
+          Fall 2026 Recruitment Timeline
         </h2>
 
         {/* Rail + alternating grid */}

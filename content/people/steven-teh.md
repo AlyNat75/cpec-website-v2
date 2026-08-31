@@ -1,12 +1,11 @@
 ---
 slug: steven-teh
 name: Steven Teh
-role: VP of Professional Development
+role: Member
 headshot: /people/steven.png
 email: smt266@cornell.edu
 major: Applied Economics & Management
 gradYear: 2027
-order: 14
 workExperience:
   - Centerview
 campusInvolvements:
@@ -14,5 +13,3 @@ campusInvolvements:
   - Alpha Fund
   - Fencing
 ---
-
-

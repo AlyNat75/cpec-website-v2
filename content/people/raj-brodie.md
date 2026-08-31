@@ -1,12 +1,11 @@
 ---
 slug: raj-brodie
 name: Raj Brodie
-role: VP of DEI
+role: Member
 headshot: /people/raj.png
 email: rb947@cornell.edu
 major: Economics
 gradYear: 2028
-order: 9
 workExperience:
   - Covara Capital
 campusInvolvements:
@@ -14,5 +13,3 @@ campusInvolvements:
   - Cornell Investments Club
   - Scholars of Finance
 ---
-
-

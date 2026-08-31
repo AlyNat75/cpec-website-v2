@@ -5,12 +5,10 @@ role: Member
 headshot: /people/sylvia.png
 email: yf373@cornell.edu
 major: Psychology & Economics
-gradYear: 2026
+gradYear: Alumni
 workExperience:
   - Macquarie
 campusInvolvements:
   - Forte
   - CUABS
 ---
-
-

@@ -5,12 +5,10 @@ role: Member
 headshot: /people/brian.png
 email: bl565@cornell.edu
 major: Applied Economics & Management
-gradYear: 2026
+gradYear: Alumni
 workExperience:
   - Tishman Speyer
 campusInvolvements:
   - DAIRE
   - REI
 ---
-
-

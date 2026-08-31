@@ -5,11 +5,9 @@ role: Member
 headshot: /people/lauren.png
 email: ls2243@cornell.edu
 major: Applied Economics & Management
-gradYear: 2026
+gradYear: Alumni
 workExperience:
   - Kohlberg (VC/PE)
 campusInvolvements:
   - DSP
 ---
-
-

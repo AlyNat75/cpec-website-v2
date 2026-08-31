@@ -106,13 +106,13 @@ export function getAllPeople(): Person[] {
 }
 
 const EBOARD_TITLES = [
-  "President, Founder",
-  "Vice President, Founder",
-  "Co-Founder",
-  "Co-President",
+  "President",
+  "Vice President",
+  "Co-VP of SRS",
   "Co-VP of NME",
   "VP of DEI",
   "Co-VP of Recruitment",
+  "VP of Social Events",
   "Co-VP of Social Events",
   "Treasurer",
   "VP of Public Relations",
@@ -120,7 +120,11 @@ const EBOARD_TITLES = [
   "VP of Membership",
   "VP of Internal Affairs",
   "VP of Finance",
-  "VP of Professional Development"
+  "VP of Professional Development",
+  "President, Founder",
+  "Vice President, Founder",
+  "Co-Founder",
+  "Co-President",
 ];
 
 export function getExecutiveBoard(): Person[] {
@@ -147,7 +151,7 @@ export function getMembers(): Person[] {
     const by = b.gradYear;
     const aNum = typeof ay === "number" || /^\d+$/.test(String(ay)) ? Number(ay) : null;
     const bNum = typeof by === "number" || /^\d+$/.test(String(by)) ? Number(by) : null;
-    if (aNum != null && bNum != null) return bNum - aNum || a.name.localeCompare(b.name);
+    if (aNum != null && bNum != null) return aNum - bNum || a.name.localeCompare(b.name);
     if (aNum != null) return -1; // numbers before strings
     if (bNum != null) return 1;
     // both strings
@@ -177,7 +181,7 @@ export function groupMembersByYear(people: Person[]): Array<{ yearKey: string | 
   const numeric = entries.filter((e) => typeof e.yearKey === "number" || /^\d+$/.test(String(e.yearKey)));
   const nonNumeric = entries.filter((e) => !numeric.includes(e));
 
-  numeric.sort((a, b) => Number(b.yearKey) - Number(a.yearKey));
+  numeric.sort((a, b) => Number(a.yearKey) - Number(b.yearKey));
   nonNumeric.sort((a, b) => String(a.yearKey).localeCompare(String(b.yearKey)));
 
   const groups = [...numeric, ...nonNumeric].map((g) => ({

@@ -23,6 +23,7 @@ export default function VideoHero() {
         muted
         loop
         playsInline
+        poster="/media/hero-poster.jpg"
         src="/media/CPEC_home_banner.mp4"
       />
 
