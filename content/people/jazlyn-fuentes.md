@@ -2,7 +2,7 @@
 slug: jazlyn-fuentes
 name: Jazlyn Fuentes
 role: Co-VP of Recruitment
-headshot: /media/cpec_placementbanner.jpg
+headshot: /people/Jazlyn.jpg
 email: jkf65@cornell.edu
 major: Applied Economics & Management
 gradYear: 2029

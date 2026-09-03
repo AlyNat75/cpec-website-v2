@@ -7,15 +7,13 @@ import { useEffect, useRef, useState } from "react";
 
 /* ---------- Timeline data (chronological) ---------- */
 const EVENTS: { date: string; title: string; location?: string }[] = [
-  { date: "Monday, Sept 2",    title: "Applications Open" },
-  { date: "Thursday, Sept 3",  title: "Breaking Into Professional Clubs" },
-  { date: "Saturday, Sept 5",  title: "Club Fest" },
-  { date: "Monday, Sept 8",    title: "Information Session #1" },
-  { date: "Thursday, Sept 10", title: "Resume Review" },
-  { date: "Tuesday, Sept 15",  title: "Information Session #2" },
-  { date: "Wednesday, Sept 16",title: "Applications Due 11:59PM" },
-  { date: "Thursday, Sept 17", title: "Round 1 [Invite Only]" },
-  { date: "Friday, Sept 18",   title: "Round 2 [Invite Only]" },
+  { date: "Thursday, Sept 3 · 6PM",  title: "Breaking into Professional Clubs", location: "Ives 305" },
+  { date: "Monday, Sept 7 · 7PM",    title: "Info Session #1", location: "STL 351" },
+  { date: "Tuesday, Sept 8 · 7PM",   title: "Breaking into PE", location: "STL 351" },
+  { date: "Thursday, Sept 10 · 5PM", title: "Resume Review", location: "STL 391" },
+  { date: "Tuesday, Sept 15 · 6PM",  title: "Info Session #2", location: "STL 391" },
+  { date: "Thursday, Sept 17 · 6PM", title: "Interview Round 1 [Invite Only]", location: "STL TBD" },
+  { date: "Friday, Sept 18 · 6PM",   title: "Interview Round 2 [Invite Only]", location: "TBD" },
 ];
 
 export default function RecruitmentPageClient() {

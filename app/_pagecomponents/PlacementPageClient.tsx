@@ -22,6 +22,7 @@ const GROUPS: Group[] = [
       "/placement/cpec_barclays.svg",
       "/placement/cpec_jefferies.svg",
       "/placement/cpec_bofa.png",
+      "/placement/bdt.png",
     ],
   },
   {
@@ -65,6 +66,7 @@ const SCALE: Record<string, string> = {
   "/placement/cpec_barclays.svg":   "scale-[1.05]",
   "/placement/cpec_jefferies.svg":  "scale-[0.7]",
   "/placement/cpec_bofa.png":       "scale-[1.9]",
+  "/placement/bdt.png":             "scale-[0.85]",
   // Summer 2026 (citi/jpm already above)
   "/placement/cpec_wellsfargo.png": "scale-[1.4]",
   "/placement/cpec_goldman.png":    "scale-[1.0]",

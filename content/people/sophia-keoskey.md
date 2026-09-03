@@ -2,7 +2,7 @@
 slug: sophia-keoskey
 name: Sophia Keoskey
 role: Co-VP of Recruitment
-headshot: /people/sophia.jpg
+headshot: /people/sophia2.jpeg
 email: sk3469@cornell.edu
 major: Applied Economics & Management
 gradYear: 2029
