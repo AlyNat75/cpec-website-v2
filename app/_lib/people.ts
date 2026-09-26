@@ -125,6 +125,7 @@ const EBOARD_TITLES = [
   "Vice President, Founder",
   "Co-Founder",
   "Co-President",
+  "Senior Advisor",
 ];
 
 export function getExecutiveBoard(): Person[] {
