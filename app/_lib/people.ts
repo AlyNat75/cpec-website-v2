@@ -143,10 +143,9 @@ export function getExecutiveBoard(): Person[] {
     });
 }
 
+// Everyone, E-board included — board members also appear under their class year
 export function getMembers(): Person[] {
-  const all = getAllPeople();
-  const boardSlugs = new Set(getExecutiveBoard().map((p) => p.slug));
-  const members = all.filter((p) => !boardSlugs.has(p.slug));
+  const members = getAllPeople();
   return members.slice().sort((a, b) => {
     const ay = a.gradYear;
     const by = b.gradYear;

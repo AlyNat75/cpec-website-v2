@@ -13,6 +13,10 @@ const PHOTOS = [
   { src: "/media/culture/culture-apartment.jpg", alt: "CPEC members at a get-together" },
   { src: "/media/culture/culture-bar.jpg", alt: "CPEC members out for dinner" },
   { src: "/media/culture/culture-ski.jpg", alt: "CPEC members on a ski trip" },
+  { src: "/media/culture/culture-group-night.jpg", alt: "CPEC members at a night out" },
+  { src: "/media/culture/culture-arch-window.jpg", alt: "CPEC members in suits on campus" },
+  { src: "/media/culture/culture-halloween.jpg", alt: "CPEC members in Halloween costumes" },
+  { src: "/media/culture/culture-selfie.jpg", alt: "CPEC members out together" },
 ];
 
 export default function CulturePageClient() {

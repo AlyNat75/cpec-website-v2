@@ -7,6 +7,13 @@ email: vc376@cornell.edu
 major: Economics
 gradYear: 2029
 order: 9
+workExperience:
+  - Convergent Finance LLP
 campusInvolvements:
-  - D1 Squash
+  - Cornell Men's Varsity D1 Squash
+  - Cornell Trading Club
+  - Student Athlete Advisory Committee
+  - Cornell 400 Club
+  - Student Athlete Tutor
+  - Big Red Leaders Program
 ---

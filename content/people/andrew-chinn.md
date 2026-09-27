@@ -2,7 +2,7 @@
 slug: andrew-chinn
 name: Andrew Chinn
 role: Co-VP of NME
-headshot: /media/cpec_placementbanner.jpg
+headshot: /people/andrew.png
 email: ahc264@cornell.edu
 major: Government
 gradYear: 2028
