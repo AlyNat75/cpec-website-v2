@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import { getMembers, groupMembersByYear } from "../_lib/people";
 import MembersPageClient from "../_pagecomponents/MembersPageClient";
 
 export const revalidate = 3600;
+
+export const metadata: Metadata = { title: "Analysts" };
 
 export default function Page() {
   const groups = groupMembersByYear(getMembers());

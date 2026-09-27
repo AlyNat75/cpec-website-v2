@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import { getExecutiveBoard } from "../_lib/people";
 import EboardPageClient from "../_pagecomponents/EboardPageClient";
 
 export const revalidate = 3600;
+
+export const metadata: Metadata = { title: "Executive Board" };
 
 export default function Page() {
   const cards = getExecutiveBoard().map((p) => ({

@@ -6,51 +6,36 @@ import Footer from "../_components/Footer";
 import { useEffect, useRef, useState } from "react";
 
 // —————————————————————————————————————————————
-// DATA — logos grouped by year
+// DATA — every firm our members have placed at, shown together
 // —————————————————————————————————————————————
 
-type Group = { label: string; logos: string[] };
+type Group = { label?: string; logos: string[] };
 
-const GROUPS: Group[] = [
-  {
-    label: "Summer 2027",
-    logos: [
-      "/placement/cpec_ubs.png",
-      "/placement/cpec_jpm.png",
-      "/placement/cpec_citi.png",
-      "/placement/cpec_ms.png",
-      "/placement/cpec_barclays.svg",
-      "/placement/cpec_jefferies.svg",
-      "/placement/cpec_bofa.png",
-      "/placement/bdt.png",
-    ],
-  },
-  {
-    label: "Summer 2026",
-    logos: [
-      "/placement/cpec_citi.png",
-      "/placement/cpec_wellsfargo.png",
-      "/placement/cpec_goldman.png",
-      "/placement/cpec_jpm.png",
-      "/placement/cpec_lazard.png",
-      "/placement/cpec_bcg.jpg",
-      "/placement/cpec_centerview.png",
-      "/placement/cpec_rothschild.png",
-      "/placement/cpec_soloman.png",
-      "/placement/cpec_millennium.png",
-    ],
-  },
-  {
-    label: "Alumni",
-    logos: [
-      "/placement/cpec_blackrock.jpg",
-      "/placement/cpec_ares.png",
-      "/placement/cpec_rbc.png",
-      "/placement/cpec_tishman.jpg",
-      "/placement/cpec_macquarie.png",
-    ],
-  },
+const LOGOS = [
+  "/placement/cpec_goldman.png",
+  "/placement/cpec_jpm.png",
+  "/placement/cpec_ms.png",
+  "/placement/cpec_centerview.png",
+  "/placement/cpec_lazard.png",
+  "/placement/bdt.png",
+  "/placement/cpec_citi.png",
+  "/placement/cpec_bofa.png",
+  "/placement/cpec_ubs.png",
+  "/placement/cpec_barclays.svg",
+  "/placement/cpec_jefferies.svg",
+  "/placement/cpec_wellsfargo.png",
+  "/placement/cpec_rothschild.png",
+  "/placement/cpec_soloman.png",
+  "/placement/cpec_millennium.png",
+  "/placement/cpec_bcg.jpg",
+  "/placement/cpec_blackrock.jpg",
+  "/placement/cpec_ares.png",
+  "/placement/cpec_rbc.png",
+  "/placement/cpec_tishman.jpg",
+  "/placement/cpec_macquarie.png",
 ];
+
+const GROUPS: Group[] = [{ logos: LOGOS }];
 
 // CSS scale applied to the container div.
 // Image uses Next.js fill + object-contain to fill the container.
@@ -164,7 +149,7 @@ function AnimatedGroups({ groups }: { groups: Group[] }) {
     <>
       {groups.map((g, idx) => (
         <div
-          key={g.label}
+          key={g.label ?? idx}
           data-group-index={idx}
           ref={(el) => { if (el) groupRefs.current[idx] = el; }}
           className={[
@@ -172,7 +157,7 @@ function AnimatedGroups({ groups }: { groups: Group[] }) {
             visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
           ].join(" ")}
         >
-          <h2 className="mb-8 text-2xl md:text-3xl font-semibold">{g.label}</h2>
+          {g.label ? <h2 className="mb-8 text-2xl md:text-3xl font-semibold">{g.label}</h2> : null}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
             {g.logos.map((src, i) => (
               <div

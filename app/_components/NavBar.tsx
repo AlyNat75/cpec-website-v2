@@ -7,6 +7,7 @@ import Image from "next/image";
 const LINKS = [
   { href: "/placement", label: "Placement" },
   { href: "/recruitment", label: "Recruitment" },
+  { href: "/cpeculture", label: "CPECULTURE" },
 ];
 
 export default function NavBar({ forceSolid = false }: { forceSolid?: boolean }) {
@@ -101,20 +102,14 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
           {/* Desktop nav */}
           <div className="ml-auto hidden items-center gap-10 md:flex md:gap-12">
             <Link
-              href="/#about"
+              href="/"
               className={[
-                "font-heading font-semibold uppercase tracking-wider text-sm md:text-base transition-all duration-300",
+                "font-body font-medium tracking-wide text-sm md:text-base transition-all duration-300",
                 scrolled ? "hover:opacity-80" : "hover:opacity-90",
               ].join(" ")}
-              style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.06em" }}
-              onClick={(e) => {
-                if (typeof window !== "undefined" && window.location.pathname === "/") {
-                  e.preventDefault();
-                  document.getElementById("about")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }}
+              style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.03em" }}
             >
-              ABOUT
+              Home
             </Link>
 
             {/* Desktop Members dropdown */}
@@ -126,11 +121,11 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                   "flex items-center gap-1 font-heading font-semibold uppercase tracking-wider text-sm md:text-base transition-all duration-300",
                   scrolled ? "hover:opacity-80" : "hover:opacity-90",
                 ].join(" ")}
-                style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.06em" }}
+                style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.03em" }}
                 aria-expanded={openMembers}
                 aria-haspopup="menu"
               >
-                MEMBERS
+                Members
                 <svg aria-hidden width="12" height="12" viewBox="0 0 20 20" fill="currentColor" className="mt-0.5">
                   <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z" />
                 </svg>
@@ -172,10 +167,10 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                 key={link.href}
                 href={link.href}
                 className={[
-                  "font-heading font-semibold uppercase tracking-wider text-sm md:text-base transition-all duration-300",
+                  "font-body font-medium tracking-wide text-sm md:text-base transition-all duration-300",
                   scrolled ? "hover:opacity-80" : "hover:opacity-90",
                 ].join(" ")}
-                style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.06em" }}
+                style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.03em" }}
               >
                 {link.label}
               </Link>
@@ -208,13 +203,13 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
           {/* Nav list */}
           <div className="px-6 pb-12">
             <nav className="flex flex-col items-start text-[#0F1A2E]">
-              {/* About */}
+              {/* Home */}
               <Link
-                href="/#about"
+                href="/"
                 onClick={closeMobileAll}
                 className="w-full border-b border-neutral-200 py-4 text-2xl font-semibold"
               >
-                About
+                Home
               </Link>
 
               {/* Members (expandable) */}
@@ -275,6 +270,13 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                 className="w-full border-b border-neutral-200 py-4 text-2xl font-semibold"
               >
                 Recruitment
+              </Link>
+              <Link
+                href="/cpeculture"
+                onClick={closeMobileAll}
+                className="w-full border-b border-neutral-200 py-4 text-2xl font-semibold"
+              >
+                CPECULTURE
               </Link>
             </nav>
           </div>

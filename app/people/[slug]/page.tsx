@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { getAllPeople, getPersonBySlug } from "../../_lib/people";
 import NavBar from "../../_components/NavBar";
@@ -6,6 +7,11 @@ export const revalidate = 3600;
 
 export function generateStaticParams() {
   return getAllPeople().map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  return { title: getPersonBySlug(slug)?.name ?? "Members" };
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
