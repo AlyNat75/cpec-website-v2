@@ -42,8 +42,7 @@ export default function CulturePageClient() {
       <NavBar forceSolid />
       <Banner
         title="CPECULTURE"
-        imageSrc="/media/culture/culture-apartment.jpg"
-        imagePosition="center 22%"
+        imageSrc="/media/culture/culture-banner.jpg"
         titleClassName="text-4xl md:text-6xl"
       />
 

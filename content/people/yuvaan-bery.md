@@ -2,7 +2,7 @@
 slug: yuvaan-bery
 name: Yuvaan Bery
 role: Member
-headshot: /people/yuvaan3.jpg
+headshot: /people/yuvaan-bery-arch.jpg
 email: yb289@cornell.edu
 major: Economics & Government
 gradYear: 2027

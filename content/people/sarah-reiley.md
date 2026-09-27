@@ -2,7 +2,7 @@
 slug: sarah-reiley
 name: Sarah Reiley
 role: Senior Advisor
-headshot: /people/sarah.JPG
+headshot: /people/sarah-reiley-arch.jpg
 email: slr252@cornell.edu
 major: Industrial Labor Relations
 gradYear: 2027
