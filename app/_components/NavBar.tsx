@@ -118,7 +118,7 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                 type="button"
                 onClick={() => setOpenMembers((v) => !v)}
                 className={[
-                  "flex items-center gap-1 font-heading font-semibold uppercase tracking-wider text-sm md:text-base transition-all duration-300",
+                  "flex items-center gap-1 font-body font-medium tracking-wide text-sm md:text-base transition-all duration-300",
                   scrolled ? "hover:opacity-80" : "hover:opacity-90",
                 ].join(" ")}
                 style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.03em" }}
