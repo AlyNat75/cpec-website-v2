@@ -56,8 +56,8 @@ const SCALE: Record<string, string> = {
   // Summer 2027
   "/placement/cpec_ubs.png":        "scale-[0.8]",
   "/placement/cpec_jpmchase.png":   "scale-[1.1]",
-  "/placement/cpec_deutsche.png":   "scale-[1.15]",
-  "/placement/cpec_convergent.png": "scale-[2.1]",
+  "/placement/cpec_deutsche.png":   "scale-[1.0]",
+  "/placement/cpec_convergent.png": "scale-[1.35]",
   "/placement/cpec_citi.png":       "scale-[1.15]",
   "/placement/cpec_ms.png":         "scale-[0.85]",
   "/placement/cpec_barclays.svg":   "scale-[1.05]",
@@ -114,7 +114,7 @@ export default function PlacementPageClient() {
       </section>
 
       {/* Year groups */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-20 space-y-16 text-center">
+      <section className="mx-auto w-full max-w-7xl px-6 py-16 md:py-20 space-y-16 text-center">
         <AnimatedGroups groups={GROUPS} />
       </section>
 
@@ -170,12 +170,12 @@ function AnimatedGroups({ groups }: { groups: Group[] }) {
           ].join(" ")}
         >
           {g.label ? <h2 className="mb-8 text-3xl md:text-4xl font-normal">{g.label}</h2> : null}
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-x-14 md:gap-y-10">
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-x-10 md:gap-y-10">
             {g.logos.map((src, i) => (
               <div
                 key={`${src}-${i}`}
                 className={[
-                  "w-[calc(50%-1.5rem)] sm:w-[calc(33.333%-2rem)] md:w-[210px]",
+                  "w-[calc(50%-1.5rem)] sm:w-[calc(33.333%-2rem)] md:w-[270px]",
                   "transition-all duration-700 will-change-transform",
                   visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
                 ].join(" ")}
@@ -200,7 +200,7 @@ function LogoCard({ src }: { src: string }) {
   const scale = SCALE[src] ?? "";
   return (
     <div
-      className="relative overflow-hidden"
+      className="relative"
       style={{ aspectRatio: "3 / 1" }}
     >
       <div className={`absolute inset-0 flex items-center justify-center p-4 md:p-6 ${scale}`}>

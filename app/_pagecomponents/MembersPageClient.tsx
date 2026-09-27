@@ -11,6 +11,7 @@ type Card = {
   role: string;
   major: string;
   headshot: string;
+  headshotPosition?: string;
   href: string;
   variant: "member" | "eboard";
 };

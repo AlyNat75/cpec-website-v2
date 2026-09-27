@@ -15,6 +15,7 @@ export default function Page() {
       role: p.role,
       major: p.major,
       headshot: p.headshot,
+      headshotPosition: p.headshotPosition,
       href: `/people/${p.slug}`,
       variant: "member" as const,
     })),

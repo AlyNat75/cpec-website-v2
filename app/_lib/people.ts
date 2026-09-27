@@ -6,6 +6,8 @@ export type Person = {
   name: string;
   role: string;
   headshot: string;
+  /** Optional CSS object-position for the card crop, e.g. "center 45%" to show the person higher */
+  headshotPosition?: string;
   email: string;
   major: string;
   gradYear: number | string; // allow strings like "Alumni"
@@ -76,6 +78,7 @@ function normalizePerson(raw: Record<string, unknown>, content: string): Person 
     name: String(raw.name),
     role: String(raw.role),
     headshot: String(raw.headshot),
+    headshotPosition: raw.headshotPosition ? String(raw.headshotPosition) : undefined,
     email: String(raw.email),
     major: String(raw.major),
     gradYear: typeof raw.gradYear === "number" ? raw.gradYear : String(raw.gradYear),

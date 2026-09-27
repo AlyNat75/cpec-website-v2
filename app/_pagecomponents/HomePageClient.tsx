@@ -59,15 +59,15 @@ export default function HomePage() {
       <VideoHero />
 
       {/* Who We Are — CIBC-style: photo left, text right, full-width button */}
-      <section id="about" ref={aboutRef} className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28 scroll-mt-12 md:scroll-mt-18">
-        <div className={["grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center transition-all duration-700 ease-out", showAbout ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
+      <section id="about" ref={aboutRef} className="mx-auto w-full max-w-[90rem] px-6 py-20 md:py-28 scroll-mt-12 md:scroll-mt-18">
+        <div className={["grid grid-cols-1 md:grid-cols-[1.35fr_1fr] gap-10 md:gap-14 items-center transition-all duration-700 ease-out", showAbout ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
           <div className="relative aspect-4/3 overflow-hidden">
             <Image
               src="/media/cpec_fullclub.png"
               alt="CPEC members outside an iconic Cornell archway"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 60vw"
             />
           </div>
 
