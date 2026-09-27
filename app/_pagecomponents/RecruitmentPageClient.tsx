@@ -16,15 +16,43 @@ const EVENTS: { title: string; date: string; time: string; location: string }[] 
   { title: "Interview Round 2",                date: "Friday, September 18",   time: "6PM", location: "Invite Only / TBD" },
 ];
 
+/* ---------- Preparation resources (accordion) ---------- */
+const RESOURCES: { title: string; items: { label: string; href?: string }[] }[] = [
+  {
+    title: "Resume",
+    items: [
+      { label: "Bring your resume to our Resume Review on Thursday, September 10" },
+      { label: "Cornell Career Services", href: "https://career.cornell.edu/" },
+      {
+        label: "Request a coffee chat with a member",
+        href: "https://docs.google.com/forms/d/1KON4bTsL5TKlfGOULErgSR6O7CXOr85KgRwGELmq7-w/viewform?edit_requested=true",
+      },
+    ],
+  },
+  {
+    title: "Behaviorals & Technicals",
+    items: [
+      { label: "Explaining Private Equity (Mergers & Inquisitions)", href: "https://mergersandinquisitions.com/private-equity/" },
+      { label: "Common Finance Interview Questions (CFI)", href: "https://corporatefinanceinstitute.com/resources/career/finance-interview-questions/" },
+      { label: "Finance Question Bank", href: "https://macro.com/app/pdf/d70e049c-1e8f-45d4-bb81-f70edc05737f" },
+    ],
+  },
+  {
+    title: "Markets",
+    items: [
+      { label: "The Wall Street Journal", href: "https://www.wsj.com/" },
+      { label: "Morning Brew", href: "https://www.morningbrew.com/" },
+    ],
+  },
+];
+
 // Swap this for a new photo by dropping it in public/media
 const TIMELINE_BG = "/media/cpec_placementbanner.jpg";
 
 export default function RecruitmentPageClient() {
   // reveal-on-scroll
   const topRef = useRef<HTMLDivElement | null>(null);
-  const explainerRef = useRef<HTMLDivElement | null>(null);
   const [showTop, setShowTop] = useState(false);
-  const [showExplainer, setShowExplainer] = useState(false);
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -32,14 +60,12 @@ export default function RecruitmentPageClient() {
         entries.forEach((e) => {
           if (!e.isIntersecting) return;
           if (e.target === topRef.current) setShowTop(true);
-          if (e.target === explainerRef.current) setShowExplainer(true);
           obs.unobserve(e.target);
         });
       },
       { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
     );
     if (topRef.current) obs.observe(topRef.current);
-    if (explainerRef.current) obs.observe(explainerRef.current);
     return () => obs.disconnect();
   }, []);
   return (
@@ -98,82 +124,38 @@ export default function RecruitmentPageClient() {
         </div>
       </section>
 
-      {/* Recruitment explainer */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-16 md:py-24" ref={explainerRef}>
-        <div className={["grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 items-start transition-all duration-700 ease-out", showExplainer ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
-          {/* Image */}
-          <div className="order-2 lg:order-1">
-            <div className="relative overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-sm aspect-4/3">
-              <Image
-                src="/media/recruitment3.png"
-                alt="CPEC members at a recruitment event"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
+      {/* Preparation Resources — CIBC-style: heading left, expandable list right */}
+      <section className="bg-black text-white">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-6 py-20 md:grid-cols-2 md:gap-16 md:py-28">
+          <h2 className="text-4xl md:text-6xl font-normal">Preparation Resources</h2>
 
-          {/* Text */}
-          <div className="order-1 lg:order-2">
-            <h2 className="text-4xl md:text-5xl font-normal text-[#0F1A2E]">
-              A Dive into Our Process
-            </h2>
-
-            <div className="mt-6 space-y-6 text-neutral-800">
-              <div>
-                <h3 className="font-semibold text-[#0F1A2E]">Recruitment Events</h3>
-                <p className="mt-1 leading-relaxed text-neutral-700">
-                  Meet our members and learn about our process at info sessions and
-                  open events throughout the semester.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="font-medium text-neutral-900">Coffee Chats</h4>
-                <p className="mt-1 leading-relaxed text-neutral-700">
-                  Get a personal look at CPEC! Sign up for a one-on-one conversation
-                  with a member to ask questions. 
-                </p>
-              </div>
-
-              {/* Resources */}
-              <div className="pt-2">
-                <h4 className="font-medium text-neutral-900">Resources</h4>
-                <div className="mt-3 flex flex-wrap gap-3">
-                  <a
-                    href="https://mergersandinquisitions.com/private-equity/"
-                    className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
-                  >
-                    Explaining PE – M&I
-                  </a>
-                  <a
-                    href="https://www.wsj.com/"
-                    className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
-                  >
-                    Current Events
-                  </a>
-                  <a
-                    href="https://corporatefinanceinstitute.com/resources/career/finance-interview-questions/"
-                    className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
-                  >
-                    Common Finance Interview Qs
-                  </a>
-                  <a
-                    href="https://www.morningbrew.com/"
-                    className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
-                  >
-                    Morning Brew
-                  </a>
-                  <a
-                    href="https://macro.com/app/pdf/d70e049c-1e8f-45d4-bb81-f70edc05737f"
-                    className="rounded-full border border-neutral-300 px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
-                  >
-                    Finance Questions
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="border-t border-white/70">
+            {RESOURCES.map((group) => (
+              <details key={group.title} className="group border-b border-white/70">
+                <summary className="flex cursor-pointer list-none items-center justify-between py-8 text-2xl md:text-3xl [&::-webkit-details-marker]:hidden">
+                  {group.title}
+                  <span aria-hidden className="text-3xl font-light transition-transform duration-200 group-open:rotate-45">+</span>
+                </summary>
+                <ul className="space-y-4 pb-8 text-lg md:text-xl">
+                  {group.items.map((item) => (
+                    <li key={item.label}>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline decoration-white/40 underline-offset-4 transition hover:decoration-white"
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <span className="text-white/85">{item.label}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ))}
           </div>
         </div>
       </section>

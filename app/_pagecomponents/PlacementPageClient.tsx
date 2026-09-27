@@ -32,7 +32,7 @@ const GROUPS: Group[] = [
       "/placement/cpec_soloman.png",
       "/placement/cpec_rbc.png",
       "/placement/cpec_macquarie.png",
-      "/placement/cpec_convergent.png",
+      "/placement/cpec_bcg.jpg",
     ],
   },
   {
@@ -42,11 +42,8 @@ const GROUPS: Group[] = [
       "/placement/cpec_ares.png",
       "/placement/cpec_millennium.png",
       "/placement/cpec_tishman.jpg",
+      "/placement/cpec_convergent.png",
     ],
-  },
-  {
-    label: "Consulting",
-    logos: ["/placement/cpec_bcg.jpg"],
   },
 ];
 
@@ -173,12 +170,12 @@ function AnimatedGroups({ groups }: { groups: Group[] }) {
           ].join(" ")}
         >
           {g.label ? <h2 className="mb-8 text-3xl md:text-4xl font-normal">{g.label}</h2> : null}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-5">
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-8 md:gap-x-14 md:gap-y-10">
             {g.logos.map((src, i) => (
               <div
                 key={`${src}-${i}`}
                 className={[
-                  "w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] md:w-[180px]",
+                  "w-[calc(50%-1.5rem)] sm:w-[calc(33.333%-2rem)] md:w-[210px]",
                   "transition-all duration-700 will-change-transform",
                   visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
                 ].join(" ")}
@@ -203,7 +200,7 @@ function LogoCard({ src }: { src: string }) {
   const scale = SCALE[src] ?? "";
   return (
     <div
-      className="relative bg-white rounded-xl shadow-sm ring-1 ring-black/5 overflow-hidden hover:shadow-md transition"
+      className="relative overflow-hidden"
       style={{ aspectRatio: "3 / 1" }}
     >
       <div className={`absolute inset-0 flex items-center justify-center p-4 md:p-6 ${scale}`}>

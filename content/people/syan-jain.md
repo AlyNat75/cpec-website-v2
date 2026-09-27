@@ -3,7 +3,7 @@ slug: syan-jain
 name: Syan Jain
 role: Member
 headshot: /people/syan.jpg
-email: 
+email: slj92@cornell.edu
 major: Statistics
 gradYear: 2029
 workExperience:
