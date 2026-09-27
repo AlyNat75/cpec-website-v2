@@ -104,7 +104,7 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
             <Link
               href="/"
               className={[
-                "font-body font-medium tracking-wide text-sm md:text-base transition-all duration-300",
+                "font-body font-medium tracking-wide text-lg md:text-xl transition-all duration-300",
                 scrolled ? "hover:opacity-80" : "hover:opacity-90",
               ].join(" ")}
               style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.03em" }}
@@ -118,7 +118,7 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                 type="button"
                 onClick={() => setOpenMembers((v) => !v)}
                 className={[
-                  "flex items-center gap-1 font-body font-medium tracking-wide text-sm md:text-base transition-all duration-300",
+                  "flex items-center gap-1 font-body font-medium tracking-wide text-lg md:text-xl transition-all duration-300",
                   scrolled ? "hover:opacity-80" : "hover:opacity-90",
                 ].join(" ")}
                 style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.03em" }}
@@ -143,7 +143,7 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                       href="/eboard"
                       role="menuitem"
                       onClick={() => setOpenMembers(false)}
-                      className="block px-4 py-2 text-sm hover:bg-black/5"
+                      className="block px-4 py-2 text-base md:text-lg hover:bg-black/5"
                       style={{ color: scrolled ? "var(--brand-dark)" : "#fff" }}
                     >
                       Executive Board
@@ -152,7 +152,7 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                       href="/members"
                       role="menuitem"
                       onClick={() => setOpenMembers(false)}
-                      className="block px-4 py-2 text-sm hover:bg-black/5"
+                      className="block px-4 py-2 text-base md:text-lg hover:bg-black/5"
                       style={{ color: scrolled ? "var(--brand-dark)" : "#fff" }}
                     >
                       Analysts
@@ -167,7 +167,7 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                 key={link.href}
                 href={link.href}
                 className={[
-                  "font-body font-medium tracking-wide text-sm md:text-base transition-all duration-300",
+                  "font-body font-medium tracking-wide text-lg md:text-xl transition-all duration-300",
                   scrolled ? "hover:opacity-80" : "hover:opacity-90",
                 ].join(" ")}
                 style={{ color: scrolled ? "var(--brand-dark)" : "#fff", letterSpacing: "0.03em" }}

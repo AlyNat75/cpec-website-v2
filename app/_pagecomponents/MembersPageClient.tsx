@@ -24,7 +24,7 @@ export default function MembersPageClient({ groups }: { groups: Group[] }) {
   return (
     <main>
       <NavBar forceSolid />
-      <Banner title="Analysts" imageSrc="/media/cpec_membersbanner.png" titleClassName="text-4xl md:text-6xl" />
+      <Banner title="Analysts" imageSrc="/media/cpec_eboardbanner2.jpg" titleClassName="text-4xl md:text-6xl" />
       <AnimatedGroups groups={groups} />
       <Footer />
     </main>

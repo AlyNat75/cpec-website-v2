@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Libre_Caslon_Text, Cabin } from "next/font/google";
+import { Libre_Caslon_Text, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
-// Headings: free Caslon (CIBC uses Adobe Caslon Pro); body: Cabin, same as CIBC
+// Headings: free Caslon (CIBC uses Adobe Caslon Pro); body text: Garamond
 const caslon = Libre_Caslon_Text({
   variable: "--font-heading",
   subsets: ["latin"],
@@ -11,10 +11,11 @@ const caslon = Libre_Caslon_Text({
   style: ["normal", "italic"],
 });
 
-const cabin = Cabin({
+const garamond = EB_Garamond({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${caslon.variable} ${cabin.variable} antialiased`}>
+      <body className={`${caslon.variable} ${garamond.variable} antialiased`}>
         {children}
         <Analytics /> 
       </body>

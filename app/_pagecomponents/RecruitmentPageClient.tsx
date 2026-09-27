@@ -6,24 +6,25 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 /* ---------- Timeline data (chronological) ---------- */
-const EVENTS: { date: string; title: string; location?: string }[] = [
-  { date: "Thursday, Sept 3 · 6PM",  title: "Breaking into Professional Clubs", location: "Ives 305" },
-  { date: "Monday, Sept 7 · 7PM",    title: "Info Session #1", location: "STL 351" },
-  { date: "Tuesday, Sept 8 · 7PM",   title: "Breaking into PE", location: "STL 351" },
-  { date: "Thursday, Sept 10 · 5PM", title: "Resume Review", location: "STL 391" },
-  { date: "Tuesday, Sept 15 · 6PM",  title: "Info Session #2", location: "STL 391" },
-  { date: "Thursday, Sept 17 · 6PM", title: "Interview Round 1 [Invite Only]", location: "STL TBD" },
-  { date: "Friday, Sept 18 · 6PM",   title: "Interview Round 2 [Invite Only]", location: "TBD" },
+const EVENTS: { title: string; date: string; time: string; location: string }[] = [
+  { title: "Breaking into Professional Clubs", date: "Thursday, September 3",  time: "6PM", location: "Ives 305" },
+  { title: "Info Session #1",                  date: "Monday, September 7",    time: "7PM", location: "STL 351" },
+  { title: "Breaking into PE",                 date: "Tuesday, September 8",   time: "7PM", location: "STL 351" },
+  { title: "Resume Review",                    date: "Thursday, September 10", time: "5PM", location: "STL 391" },
+  { title: "Info Session #2",                  date: "Tuesday, September 15",  time: "6PM", location: "STL 391" },
+  { title: "Interview Round 1",                date: "Thursday, September 17", time: "6PM", location: "Invite Only / STL TBD" },
+  { title: "Interview Round 2",                date: "Friday, September 18",   time: "6PM", location: "Invite Only / TBD" },
 ];
+
+// Swap this for a new photo by dropping it in public/media
+const TIMELINE_BG = "/media/cpec_placementbanner.jpg";
 
 export default function RecruitmentPageClient() {
   // reveal-on-scroll
   const topRef = useRef<HTMLDivElement | null>(null);
   const explainerRef = useRef<HTMLDivElement | null>(null);
-  const timelineRef = useRef<HTMLDivElement | null>(null);
   const [showTop, setShowTop] = useState(false);
   const [showExplainer, setShowExplainer] = useState(false);
-  const [showTimeline, setShowTimeline] = useState(false);
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -32,7 +33,6 @@ export default function RecruitmentPageClient() {
           if (!e.isIntersecting) return;
           if (e.target === topRef.current) setShowTop(true);
           if (e.target === explainerRef.current) setShowExplainer(true);
-          if (e.target === timelineRef.current) setShowTimeline(true);
           obs.unobserve(e.target);
         });
       },
@@ -40,36 +40,61 @@ export default function RecruitmentPageClient() {
     );
     if (topRef.current) obs.observe(topRef.current);
     if (explainerRef.current) obs.observe(explainerRef.current);
-    if (timelineRef.current) obs.observe(timelineRef.current);
     return () => obs.disconnect();
   }, []);
   return (
     <main className="min-h-screen bg-white">
       <NavBar forceSolid />
 
-      {/* Top notice / coming soon */}
-      <section className="mx-auto w-full max-w-7xl px-6 pt-24 md:pt-32" ref={topRef}>
-        <div className={["rounded-3xl border border-neutral-200/80 bg-white px-8 py-10 md:px-14 md:py-14 text-center shadow-sm transition-all duration-700 ease-out", showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[#0F1A2E]">
-            Fall 2026 Recruitment
-          </h1>
+      {/* Recruitment Timeline — CIBC-style: photo background, events in a grid */}
+      <section className="relative w-full overflow-hidden" ref={topRef}>
+        <Image src={TIMELINE_BG} alt="" fill priority className="object-cover" sizes="100vw" />
+        <div className="absolute inset-0 bg-[#1b2740]/75" />
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 md:gap-8">
+        <div
+          className={[
+            "relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 text-center text-white transition-all duration-700 ease-out md:pb-28",
+            showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
+          ].join(" ")}
+          style={{ paddingTop: "calc(var(--nav-height) + 4rem)" }}
+        >
+          <h1 className="text-5xl md:text-7xl font-normal">Recruitment Timeline</h1>
+          <p className="mt-4 text-xl md:text-2xl text-white/85">Fall 2026</p>
+
+          <div className="mt-16 grid grid-cols-1 gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+            {EVENTS.map((e, idx) => (
+              <div
+                key={e.title}
+                className={["transition-all duration-700", showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"].join(" ")}
+                style={{ transitionDelay: showTop ? `${150 + idx * 80}ms` : "0ms" }}
+              >
+                <h3 className="font-body text-2xl md:text-3xl font-semibold">{e.title}</h3>
+                <p className="mt-4 text-lg md:text-xl text-white/90">{e.date}</p>
+                <p className="mt-1 text-lg md:text-xl text-white/90">{e.time} / {e.location}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
             <a
               href="https://docs.google.com/forms/d/1KON4bTsL5TKlfGOULErgSR6O7CXOr85KgRwGELmq7-w/viewform?edit_requested=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#1d4480] px-7 py-3.5 text-white text-sm md:text-base font-medium shadow-sm hover:opacity-90 transition"
+              className="inline-flex items-center justify-center rounded-full border border-white px-8 py-3.5 text-lg font-medium text-white transition hover:bg-white/15"
             >
               Coffee Chat Request
             </a>
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-full bg-[#1d4480] px-7 py-3.5 text-white text-sm md:text-base font-medium shadow-sm hover:opacity-90 transition"
+              className="inline-flex items-center justify-center rounded-full border border-white px-8 py-3.5 text-lg font-medium text-white transition hover:bg-white/15"
             >
               Join Email List
             </a>
           </div>
+
+          <p className="mt-8 text-sm text-white/70">
+            *Subject to change. Room details will be posted on our socials.
+          </p>
         </div>
       </section>
 
@@ -91,7 +116,7 @@ export default function RecruitmentPageClient() {
 
           {/* Text */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F1A2E]">
+            <h2 className="text-4xl md:text-5xl font-normal text-[#0F1A2E]">
               A Dive into Our Process
             </h2>
 
@@ -153,68 +178,7 @@ export default function RecruitmentPageClient() {
         </div>
       </section>
 
-      {/* Timeline (alternating, staggered) */}
-      <section className="mx-auto w-full max-w-7xl px-6 pb-20 md:pb-28" ref={timelineRef}>
-        <h2 className={["text-center text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F1A2E] transition-all duration-700", showTimeline ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
-          Fall 2026 Recruitment Timeline
-        </h2>
-
-        {/* Rail + alternating grid */}
-        <div className={["relative mt-12 transition-all duration-700 ease-out", showTimeline ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
-          {/* center rail on lg */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-neutral-200 -translate-x-1/2" />
-
-          <ul className="relative mt-12 space-y-8">
-            {EVENTS.map((e, idx) => (
-              <div key={idx} style={{ transitionDelay: showTimeline ? `${100 + idx * 80}ms` : "0ms" }} className={["transition-all duration-700", showTimeline ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"].join(" ") }>
-                <TimelineItem
-                  date={e.date}
-                  title={e.title}
-                  location={e.location}
-                  side={idx % 2 === 0 ? "left" : "right"}
-                />
-              </div>
-            ))}
-          </ul>
-
-        </div>
-
-        <p className="mt-8 text-center text-sm text-neutral-500">
-          *Subject to change. Room details will be posted on our socials.
-        </p>
-      </section>
-
       <Footer />
     </main>
-  );
-}
-
-/* ---------- helpers ---------- */
-type ItemProps = {
-  date: string;
-  title: string;
-  location?: string;
-  side?: "left" | "right";
-};
-
-function TimelineItem({ date, title, location, side = "left" }: ItemProps) {
-
-  const desktopSide =
-    side === "left"
-      ? "lg:col-start-1 lg:pr-12 lg:text-right lg:items-end"
-      : "lg:col-start-2 lg:pl-12 lg:text-left lg:items-start";
-
-  return (
-    <li className="relative grid grid-cols-1 lg:grid-cols-2">
-      {/* center rail dot (relative to this row) */}
-      <span className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-2.5 w-2.5 rounded-full bg-[#1d4480]" />
-
-      {/* content block in left or right column */}
-      <div className={`flex flex-col ${desktopSide}`}>
-        <div className="text-sm font-semibold text-[#1d4480]">{date}</div>
-        <div className="mt-1 text-lg font-semibold text-neutral-900">{title}</div>
-        {location && <div className="text-sm text-neutral-600">{location}</div>}
-      </div>
-    </li>
   );
 }

@@ -6,36 +6,49 @@ import Footer from "../_components/Footer";
 import { useEffect, useRef, useState } from "react";
 
 // —————————————————————————————————————————————
-// DATA — every firm our members have placed at, shown together
+// DATA — firms our members have placed at, by side of the street
 // —————————————————————————————————————————————
 
 type Group = { label?: string; logos: string[] };
 
-const LOGOS = [
-  "/placement/cpec_goldman.png",
-  "/placement/cpec_jpm.png",
-  "/placement/cpec_ms.png",
-  "/placement/cpec_centerview.png",
-  "/placement/cpec_lazard.png",
-  "/placement/bdt.png",
-  "/placement/cpec_citi.png",
-  "/placement/cpec_bofa.png",
-  "/placement/cpec_ubs.png",
-  "/placement/cpec_barclays.svg",
-  "/placement/cpec_jefferies.svg",
-  "/placement/cpec_wellsfargo.png",
-  "/placement/cpec_rothschild.png",
-  "/placement/cpec_soloman.png",
-  "/placement/cpec_millennium.png",
-  "/placement/cpec_bcg.jpg",
-  "/placement/cpec_blackrock.jpg",
-  "/placement/cpec_ares.png",
-  "/placement/cpec_rbc.png",
-  "/placement/cpec_tishman.jpg",
-  "/placement/cpec_macquarie.png",
+const GROUPS: Group[] = [
+  {
+    label: "Sell-Side",
+    logos: [
+      "/placement/cpec_goldman.png",
+      "/placement/cpec_jpmchase.png",
+      "/placement/cpec_ms.png",
+      "/placement/cpec_centerview.png",
+      "/placement/cpec_lazard.png",
+      "/placement/bdt.png",
+      "/placement/cpec_citi.png",
+      "/placement/cpec_bofa.png",
+      "/placement/cpec_ubs.png",
+      "/placement/cpec_barclays.svg",
+      "/placement/cpec_deutsche.png",
+      "/placement/cpec_jefferies.svg",
+      "/placement/cpec_wellsfargo.png",
+      "/placement/cpec_rothschild.png",
+      "/placement/cpec_soloman.png",
+      "/placement/cpec_rbc.png",
+      "/placement/cpec_macquarie.png",
+      "/placement/cpec_convergent.png",
+    ],
+  },
+  {
+    label: "Buy-Side",
+    logos: [
+      "/placement/cpec_blackrock.jpg",
+      "/placement/cpec_ares.png",
+      "/placement/cpec_millennium.png",
+      "/placement/cpec_tishman.jpg",
+    ],
+  },
+  {
+    label: "Consulting",
+    logos: ["/placement/cpec_bcg.jpg"],
+  },
 ];
-
-const GROUPS: Group[] = [{ logos: LOGOS }];
 
 // CSS scale applied to the container div.
 // Image uses Next.js fill + object-contain to fill the container.
@@ -45,7 +58,9 @@ const GROUPS: Group[] = [{ logos: LOGOS }];
 const SCALE: Record<string, string> = {
   // Summer 2027
   "/placement/cpec_ubs.png":        "scale-[0.8]",
-  "/placement/cpec_jpm.png":        "scale-[0.85]",
+  "/placement/cpec_jpmchase.png":   "scale-[1.1]",
+  "/placement/cpec_deutsche.png":   "scale-[1.15]",
+  "/placement/cpec_convergent.png": "scale-[2.1]",
   "/placement/cpec_citi.png":       "scale-[1.15]",
   "/placement/cpec_ms.png":         "scale-[0.85]",
   "/placement/cpec_barclays.svg":   "scale-[1.05]",
@@ -102,7 +117,7 @@ export default function PlacementPageClient() {
       </section>
 
       {/* Year groups */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-16 md:py-20 space-y-16 text-center">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-20 space-y-16 text-center">
         <AnimatedGroups groups={GROUPS} />
       </section>
 
@@ -157,12 +172,13 @@ function AnimatedGroups({ groups }: { groups: Group[] }) {
             visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
           ].join(" ")}
         >
-          {g.label ? <h2 className="mb-8 text-2xl md:text-3xl font-semibold">{g.label}</h2> : null}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
+          {g.label ? <h2 className="mb-8 text-3xl md:text-4xl font-normal">{g.label}</h2> : null}
+          <div className="flex flex-wrap justify-center gap-4 md:gap-5">
             {g.logos.map((src, i) => (
               <div
                 key={`${src}-${i}`}
                 className={[
+                  "w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.75rem)] md:w-[180px]",
                   "transition-all duration-700 will-change-transform",
                   visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
                 ].join(" ")}
