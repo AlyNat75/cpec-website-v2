@@ -23,5 +23,5 @@ body {
 
 /* Utilities to bind next/font variables to classes */
 h1, h2, h3, h4, h5, h6,
-.font-heading { font-family: var(--font-heading), Georgia, "Times New Roman", serif; }
+.font-heading { font-family: var(--font-body), Garamond, Georgia, serif; }
 .font-body { font-family: var(--font-body), Garamond, Georgia, serif; }

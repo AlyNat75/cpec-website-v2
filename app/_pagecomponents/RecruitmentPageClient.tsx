@@ -128,7 +128,7 @@ export default function RecruitmentPageClient() {
       </section>
 
       {/* Preparation Resources — CIBC-style: heading left, expandable list right */}
-      <section className="bg-black text-white">
+      <section className="bg-[#0f2242] text-white">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-6 py-20 md:grid-cols-2 md:gap-16 md:py-28">
           <h2 className="text-4xl md:text-6xl font-normal">Preparation Resources</h2>
 
