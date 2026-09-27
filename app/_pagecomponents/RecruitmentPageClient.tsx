@@ -21,27 +21,30 @@ const RESOURCES: { title: string; items: { label: string; href?: string }[] }[] 
   {
     title: "Resume",
     items: [
+      { label: "SC Johnson Resume Template", href: "https://cornellinvestmentbankingclub.squarespace.com/s/Resume-Template-SCJohnson-CIBC.docx" },
       { label: "Bring your resume to our Resume Review on Thursday, September 10" },
       { label: "Cornell Career Services", href: "https://career.cornell.edu/" },
-      {
-        label: "Request a coffee chat with a member",
-        href: "https://docs.google.com/forms/d/1KON4bTsL5TKlfGOULErgSR6O7CXOr85KgRwGELmq7-w/viewform?edit_requested=true",
-      },
     ],
   },
   {
     title: "Behaviorals & Technicals",
     items: [
-      { label: "Explaining Private Equity (Mergers & Inquisitions)", href: "https://mergersandinquisitions.com/private-equity/" },
-      { label: "Common Finance Interview Questions (CFI)", href: "https://corporatefinanceinstitute.com/resources/career/finance-interview-questions/" },
-      { label: "Finance Question Bank", href: "https://macro.com/app/pdf/d70e049c-1e8f-45d4-bb81-f70edc05737f" },
+      { label: "400 Questions Guide", href: "https://cornellinvestmentbankingclub.squarespace.com/s/400-Questions-IB-Interview-Guide-2025.pdf" },
+      { label: "Vault Guide to Investment Banking", href: "https://cornell.vault.com/" },
+      {
+        label: "The Red Book by Wall Street Prep",
+        href: "https://static1.squarespace.com/static/66629fa52286570a6c2b8950/t/66dab39c0e6a6247108fe2bb/1725608868157/Wall+Street+Prep+_+The+RedBook.pdf",
+      },
     ],
   },
   {
     title: "Markets",
     items: [
-      { label: "The Wall Street Journal", href: "https://www.wsj.com/" },
-      { label: "Morning Brew", href: "https://www.morningbrew.com/" },
+      { label: "Wall Street Journal", href: "https://johnson.library.cornell.edu/database/wall-street-journal/" },
+      { label: "Financial Times", href: "https://johnson.library.cornell.edu/database/financial-times/" },
+      { label: "ExecSum Newsletter", href: "https://www.execsum.co/" },
+      { label: "Morning Brew Newsletter", href: "https://www.morningbrew.com/subscribe" },
+      { label: "PitchBook", href: "https://johnson.library.cornell.edu/database/pitchbook/" },
     ],
   },
 ];
