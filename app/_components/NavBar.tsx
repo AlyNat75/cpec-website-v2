@@ -7,7 +7,7 @@ import Image from "next/image";
 const LINKS = [
   { href: "/placement", label: "Placement" },
   { href: "/recruitment", label: "Recruitment" },
-  { href: "/cpeculture", label: "CPECULTURE" },
+  { href: "/cpeculture", label: "CPECulture" },
 ];
 
 export default function NavBar({ forceSolid = false }: { forceSolid?: boolean }) {
@@ -276,7 +276,7 @@ export default function NavBar({ forceSolid = false }: { forceSolid?: boolean })
                 onClick={closeMobileAll}
                 className="w-full border-b border-neutral-200 py-4 text-2xl font-semibold"
               >
-                CPECULTURE
+                CPECulture
               </Link>
             </nav>
           </div>

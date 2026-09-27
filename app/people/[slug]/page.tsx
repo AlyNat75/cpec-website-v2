@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { getAllPeople, getPersonBySlug } from "../../_lib/people";
 import NavBar from "../../_components/NavBar";
 
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const person = getPersonBySlug(slug);
-  if (!person) return null;
+  if (!person) notFound();
 
   return (
     <main>
@@ -78,12 +79,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 </div>
               )}
 
-              <p className="pt-4">
-                {person.name} can be reached at{" "}
-                <a className="underline underline-offset-2" href={`mailto:${person.email}`}>
-                  {person.email}
-                </a>
-              </p>
+              {person.email ? (
+                <p className="pt-4">
+                  {person.name} can be reached at{" "}
+                  <a className="underline underline-offset-2" href={`mailto:${person.email}`}>
+                    {person.email}
+                  </a>
+                </p>
+              ) : null}
             </div>
           </div>
         </article>

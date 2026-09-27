@@ -6,7 +6,7 @@ headshot: /people/moksh.png
 email: mp2349@cornell.edu
 major: Hotel Administration
 gradYear: 2028
-order: 1
+order: 2
 workExperience:
   - Barclays
 campusInvolvements:

@@ -6,7 +6,7 @@ headshot: /people/cade.png
 email: cbw85@cornell.edu
 major: Engineering
 gradYear: 2029
-order: 2
+order: 4
 campusInvolvements:
   - ROTC
 ---

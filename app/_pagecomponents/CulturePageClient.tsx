@@ -7,14 +7,14 @@ import Banner from "../_components/Banner";
 import Footer from "../_components/Footer";
 
 // Photo wall — add a file to public/media/culture and list it here
-const PHOTOS = [
+const PHOTOS: { src: string; alt: string; zoom?: number }[] = [
   { src: "/media/culture/culture-dinner.jpg", alt: "CPEC members at an outdoor dinner" },
   { src: "/media/culture/culture-couch.jpg", alt: "CPEC members hanging out" },
   { src: "/media/culture/culture-apartment.jpg", alt: "CPEC members at a get-together" },
   { src: "/media/culture/culture-bar.jpg", alt: "CPEC members out for dinner" },
   { src: "/media/culture/culture-ski.jpg", alt: "CPEC members on a ski trip" },
   { src: "/media/culture/culture-group-night.jpg", alt: "CPEC members at a night out" },
-  { src: "/media/culture/culture-arch-window.jpg", alt: "CPEC members in suits on campus" },
+  { src: "/media/culture/culture-arch-window.jpg", alt: "CPEC members in suits on campus", zoom: 1.25 },
   { src: "/media/culture/culture-halloween.jpg", alt: "CPEC members in Halloween costumes" },
   { src: "/media/culture/culture-selfie.jpg", alt: "CPEC members out together" },
 ];
@@ -41,9 +41,9 @@ export default function CulturePageClient() {
     <main>
       <NavBar forceSolid />
       <Banner
-        title="CPECULTURE"
+        title="CPECulture"
         imageSrc="/media/culture/culture-banner.jpg"
-        titleClassName="text-4xl md:text-6xl"
+        titleClassName="normal-case text-4xl md:text-6xl"
       />
 
       {/* CIBC-style photo grid: square tiles, three across, last row centered */}
@@ -58,7 +58,7 @@ export default function CulturePageClient() {
               ].join(" ")}
               style={{ transitionDelay: show ? `${80 + i * 70}ms` : "0ms" }}
             >
-              <Image src={p.src} alt={p.alt} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" />
+              <Image src={p.src} alt={p.alt} fill className="object-cover" style={p.zoom ? { transform: `scale(${p.zoom})` } : undefined} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw" />
             </div>
           ))}
         </div>

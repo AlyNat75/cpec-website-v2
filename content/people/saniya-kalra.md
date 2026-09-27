@@ -6,7 +6,7 @@ headshot: /people/saniya.png
 email: sk2797@cornell.edu
 major: Hotel Administration
 gradYear: 2027
-order: 11
+order: 12
 workExperience:
   - Lazard (PCA Real Assets)
 campusInvolvements:

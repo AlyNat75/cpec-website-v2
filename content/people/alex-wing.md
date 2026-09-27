@@ -1,12 +1,12 @@
 ---
 slug: alex-wing
 name: Alex Wing
-role: Co-VP of SRS
+role: VP of SRS
 headshot: /people/alex.png
 email: ahw86@cornell.edu
 major: Applied Economics & Management
 gradYear: 2028
-order: 3
+order: 5
 workExperience:
   - Jefferies
 campusInvolvements:

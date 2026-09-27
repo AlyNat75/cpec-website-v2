@@ -2,11 +2,11 @@
 slug: will-he
 name: Will He
 role: VP of Marketing
-headshot: /people/will-he-arch.jpg
+headshot: /people/will.png
 email: wzh3@cornell.edu
 major: Hotel Administration
 gradYear: 2029
-order: 12
+order: 13
 workExperience:
   - IA Financial/Richardson Wealth
 campusInvolvements:

@@ -6,7 +6,7 @@ headshot: /people/vedant_v2.png
 email: vc376@cornell.edu
 major: Economics
 gradYear: 2029
-order: 9
+order: 8
 workExperience:
   - Convergent Finance LLP
 campusInvolvements:

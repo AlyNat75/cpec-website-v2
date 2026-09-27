@@ -6,7 +6,7 @@ headshot: /people/Tyson2.png
 email: tad234@cornell.edu
 major: Industrial Labor Relations
 gradYear: 2029
-order: 10
+order: 11
 campusInvolvements:
   - ROTC
   - Cornell Hawaii Club
