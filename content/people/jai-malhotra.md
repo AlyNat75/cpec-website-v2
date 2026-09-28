@@ -8,7 +8,7 @@ major: Economics & CS
 gradYear: 2028
 order: 1
 workExperience:
-  - Incoming J.P. Morgan
+  - Incoming Investment Banking Analyst at J.P. Morgan
 campusInvolvements:
   - PCT
 ---
