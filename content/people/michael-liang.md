@@ -14,4 +14,4 @@ campusInvolvements:
   - Diversity on The Street Finance Club
 ---
 
-
+Michael is a junior studying Healthcare Policy with a minor in Law & Society. This past summer, he interned in Portfolio Management at Nine Masts Capital and in the Trusts & Estates practice at iLead Law Group. On campus, he is involved with Phi Alpha Delta Pre-Law Fraternity, Cornell M&A Club, Cornell Startup Consulting Club, Cornell Marketing Club, and Diversity on the Street Finance Club.

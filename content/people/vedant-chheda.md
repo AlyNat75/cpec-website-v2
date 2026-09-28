@@ -17,3 +17,5 @@ campusInvolvements:
   - Student Athlete Tutor
   - Big Red Leaders Program
 ---
+
+Vedant is a Sophomore studying Economics & Global Development, serving as VP of Internal Affairs. He interned as a Private Equity Summer Analyst at Convergent Finance LLP. On campus, he is affiliated with the Division 1 Men's Varsity Squash, Cornell 400 Club, Cornell Trading Club, Student Athlete Advisory Committee, and the Big Red Leaders Program. In his free time, Vedant enjoys driving cars, playing poker, and rewatching shows.

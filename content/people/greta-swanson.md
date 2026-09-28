@@ -12,4 +12,4 @@ campusInvolvements:
   - Buddhist Sangha Club
 ---
 
-
+Greta is a junior studying Operations Research and Information Engineering (ORIE). She previously interned as a Machine Learning and Computational Biology Research Intern at the Lund Lab at NYU Langone Health, a Medical Assistant Intern at Internal Medicine Specialists, and a Clinical Research Intern at CHRISTUS St. Vincent. On campus, she is involved with the Business and Design sub-team at CUBMD, Alpha Phi Sorority, and Buddhist Sangha Club.

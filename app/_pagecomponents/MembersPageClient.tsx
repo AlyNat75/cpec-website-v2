@@ -105,7 +105,7 @@ function AnimatedGroups({ groups }: { groups: Group[] }) {
             ].join(" ")}
           >
             <h2 className="mb-8 text-2xl md:text-3xl font-semibold">{g.label}</h2>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-x-10 gap-y-12">
               {g.people.map((p, i) => (
                 <div
                   key={p.href}

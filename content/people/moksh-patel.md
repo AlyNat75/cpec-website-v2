@@ -12,3 +12,5 @@ workExperience:
 campusInvolvements:
   - Alpine Ski Team
 ---
+
+Moksh is a Junior studying Hotel Administration, serving as Co-President. He interned as a Private Credit Summer Analyst at Man Varagon and is an Incoming Investment Banking Analyst at Barclays. On campus, he is affiliated with the Cornell Alpine Ski Club. In his free time, Moksh enjoys skiing, movies, and backpacking.

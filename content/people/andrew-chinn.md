@@ -14,3 +14,5 @@ campusInvolvements:
   - Cornell Lightweight Rowing
   - Indonesian Association at Cornell
 ---
+
+Andrew is a Junior studying Government, serving as VP of NME. He interned at PwC Corporate Finance doing M&A and RX. On campus, he is affiliated with Global Cornell Connection (President), TRIBECA Business Club, Cornell Lightweight Rowing, and Indonesian Association at Cornell. In his free time, Andrew enjoys rowing, AI, S&T, rock climbing, hiking/climbing, and cooking.

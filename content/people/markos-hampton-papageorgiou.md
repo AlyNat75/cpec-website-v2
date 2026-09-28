@@ -12,4 +12,4 @@ campusInvolvements:
   - Club Basketball
 ---
 
-
+Markos is a Sophomore member studying History and Economics. He interned in Private Equity this past summer at Handal Dunaway. On campus, he is affiliated with the Alpha Delta Phi Social Fraternity, Hellenic Student Association (Vice President) and Club Basketball. In his free time, Markos enjoys running, soccer, film, history, and politics.

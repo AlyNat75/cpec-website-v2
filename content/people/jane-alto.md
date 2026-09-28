@@ -13,4 +13,4 @@ campusInvolvements:
   - PDOW
 ---
 
-
+Jane is a senior in the ILR School. She is currently an Investment Banking Summer Analyst at Citi. On campus, Janie is involved with Cornell Alternative Investments, the Honor Society of Phi Kappa Phi, Professional Development of Women, and the Alpha Phi sorority.

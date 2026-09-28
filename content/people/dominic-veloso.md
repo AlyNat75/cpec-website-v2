@@ -12,4 +12,4 @@ campusInvolvements:
   - D1 Lacrosse
 ---
 
-
+Dom is a Sophomore studying Economics. He interned at Alger this past summer and Centerbridge Partners prior to that as Private Equity Intern. On campus, he is affiliated with the Division 1 Men's Varsity Lacrosse team and the Cornell Mergers and Acquisitions Club.

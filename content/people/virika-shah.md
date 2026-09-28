@@ -12,3 +12,5 @@ campusInvolvements:
   - Cornell Hedge Fund
   - Impact Investing at Cornell
 ---
+
+Virika is a Sophomore member studying Economics. She interned at Kotak Mahindra Bank in Investment Banking in the Equity Capital Markets Division. On campus, she is affiliated with the Cornell Hedge Fund and Impact Investing at Cornell. In her free time, Virika enjoys dance, reading, and history.

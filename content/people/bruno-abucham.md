@@ -13,4 +13,4 @@ campusInvolvements:
   - Varsity Men's Polo
 ---
 
-
+Bruno is a Junior studying Agricultural Sciences in CALS. He interned at Bank of America this past summer in the Investment Banking division.

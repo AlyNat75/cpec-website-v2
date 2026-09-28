@@ -11,3 +11,5 @@ workExperience:
 campusInvolvements:
   - D1 Rowing
 ---
+
+Rahil is a Senior member studying Applied Economics & Management in the Dyson School. He has interned at Citi Bank. On campus, he is involved in Varsity Rowing.

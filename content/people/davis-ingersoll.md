@@ -12,3 +12,5 @@ campusInvolvements:
   - Cornell Hedge Fund
   - DEBUT Biomedical Engineering Project Team
 ---
+
+Davis is a Senior studying Applied Economics & Management in the Dyson School. He is an incoming Investment Banking Analyst at Rothschild & Co, and on campus he is involved in Cornell Hedge Fund (President), Cornell Ski Club, Cornell Rowing Club, and the DEBUT Biomedical Engineering Project Team.

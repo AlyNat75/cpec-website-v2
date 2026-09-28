@@ -13,4 +13,4 @@ campusInvolvements:
   - CREC
 ---
 
-
+Racquel is a Senior member studying Hotel Administration. She has interned at Greystone, as well as Ackman-Ziff the year prior. On campus, she is involved in the Cornell Real Estate Club.

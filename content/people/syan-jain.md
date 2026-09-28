@@ -13,3 +13,5 @@ campusInvolvements:
   - Cornell Financial Analysts
   - South Asian Business Association
 ---
+
+Syan is a Sophomore member studying Biometry & Statistics. He interned in Wealth Management at UBS this past summer. On campus, he is affiliated with Cornell Financial Analysts, Alpha Kappa Psi, and the South Asian Business Association (VP Social). In his free time, Syan enjoys watching Arizona sports, reading, trying new foods, and pickleball.

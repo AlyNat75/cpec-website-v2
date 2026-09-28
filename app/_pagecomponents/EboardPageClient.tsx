@@ -62,7 +62,7 @@ function AnimatedGrid({ cards }: { cards: Card[] }) {
             if (el) rowRefs.current[rowIdx] = el;
           }}
           className={[
-            "flex flex-wrap justify-center gap-6 mb-6 transition-all duration-700",
+            "flex flex-wrap justify-center gap-x-10 gap-y-12 mb-12 transition-all duration-700",
             visibleRow[rowIdx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
           ].join(" ")}
         >

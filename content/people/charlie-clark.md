@@ -10,3 +10,5 @@ order: 15
 campusInvolvements:
   - The Cornell Daily Sun
 ---
+
+Charlie is a Sophomore studying Applied Economics & Management in the Dyson School, serving as VP of Public Relations. He interned at a Distressed Hedge Fund. On campus, he is affiliated with The Cornell Daily Sun, serving as Revenue and Partnerships Manager and the Chi Psi Fraternity. In his free time, Charlie enjoys golf, sailing, and gastronomy.
