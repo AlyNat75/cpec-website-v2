@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
           {/* Right: name, internship, bio, contact */}
           <div className="flex-1 text-neutral-900 md:pl-6 lg:pl-10 xl:pl-14 md:pt-4 lg:pt-8 xl:pt-10">
-            <h1 className="text-5xl lg:text-6xl font-normal text-[#1d4480]">{person.name}</h1>
+            <h1 className="text-5xl lg:text-6xl font-normal text-[#161439]">{person.name}</h1>
 
             {person.workExperience && person.workExperience.length > 0 ? (
               <p className="mt-3 text-xl md:text-2xl font-semibold text-[#e2703a]">{person.workExperience[0]}</p>
@@ -62,7 +62,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               {person.email ? (
                 <p className="pt-2">
                   {firstName} can be reached at{" "}
-                  <a className="text-[#1d4480] underline underline-offset-2" href={`mailto:${person.email}`}>
+                  <a className="text-[#161439] underline underline-offset-2" href={`mailto:${person.email}`}>
                     {person.email}
                   </a>
                 </p>

@@ -17,7 +17,7 @@ export default function PersonCard({ name, role, major, headshot, headshotPositi
   return (
     <Link
       href={href}
-      className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-[#1d4480]/60"
+      className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-[#161439]/60"
     >
       <div className="relative overflow-hidden bg-neutral-100" style={{ aspectRatio: "4 / 5" }}>
         {/* Same crop anchor for every photo so faces line up across a row */}
@@ -25,7 +25,7 @@ export default function PersonCard({ name, role, major, headshot, headshotPositi
       </div>
       {/* Fixed height keeps every card in a row the same size */}
       <div className="flex min-h-[6.5rem] flex-col items-center justify-start px-2 pt-5 text-center">
-        <div className="text-2xl md:text-[1.7rem] leading-tight text-[#1d4480] group-hover:underline underline-offset-4">{name}</div>
+        <div className="text-2xl md:text-[1.7rem] leading-tight text-[#161439] group-hover:underline underline-offset-4">{name}</div>
         <div className="mt-2 text-base md:text-lg text-black">{variant === "eboard" ? role : major}</div>
       </div>
     </Link>
