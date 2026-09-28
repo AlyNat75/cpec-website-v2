@@ -8,7 +8,7 @@ major: Hotel Administration
 gradYear: 2028
 order: 2
 workExperience:
-  - Incoming Investment Banking Analyst at Barclays
+  - Incoming Investment Banking Summer Analyst at Barclays
 campusInvolvements:
   - Alpine Ski Team
 ---

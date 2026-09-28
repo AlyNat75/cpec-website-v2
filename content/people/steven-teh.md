@@ -7,7 +7,7 @@ email: smt266@cornell.edu
 major: Applied Economics & Management
 gradYear: 2027
 workExperience:
-  - Centerview
+  - Incoming Investment Banking Analyst at Centerview Partners
 campusInvolvements:
   - CFA
   - Alpha Fund

@@ -8,7 +8,7 @@ major: Government
 gradYear: 2028
 order: 6
 workExperience:
-  - Incoming Investment Banking Analyst at Deutsche Bank
+  - Incoming Investment Banking Summer Analyst at Deutsche Bank
 campusInvolvements:
   - Global Cornell Connection
   - Cornell Lightweight Rowing

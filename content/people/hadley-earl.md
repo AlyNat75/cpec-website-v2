@@ -7,7 +7,7 @@ email: hte8@cornell.edu
 major: Hotel
 gradYear: 2028
 workExperience:
-  - Morgan Stanley
+  - Incoming Investment Banking Summer Analyst at Morgan Stanley
 campusInvolvements:
   - CREDIT
 ---

@@ -7,7 +7,7 @@ email: rb947@cornell.edu
 major: Economics
 gradYear: 2028
 workExperience:
-  - Covara Capital
+  - Capital One
 campusInvolvements:
   - Diversity on the Street
   - Cornell Investments Club

@@ -9,7 +9,7 @@ major: Applied Economics & Management
 gradYear: 2028
 order: 5
 workExperience:
-  - Incoming Investment Banking Analyst at Jefferies
+  - Incoming Investment Banking Summer Analyst at Jefferies
 campusInvolvements:
   - Cayuga Capital
   - History Society
