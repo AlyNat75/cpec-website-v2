@@ -41,7 +41,7 @@ const GROUPS: Group[] = [
     label: "Buy-Side",
     logos: [
       "/placement/cpec_carlyle.png",
-      "/placement/cpec_odyssey.png",
+      "/placement/cpec_odyssey_ip.png",
       "/placement/cpec_rosecliff.png",
       "/placement/cpec_blackrock.jpg",
       "/placement/cpec_ares.png",
@@ -63,6 +63,7 @@ const SCALE: Record<string, string> = {
   "/placement/cpec_jpmchase.png":   "scale-[1.1]",
   "/placement/cpec_deutsche.png":   "scale-[1.0]",
   "/placement/cpec_convergent.png": "scale-[1.35]",
+  "/placement/cpec_odyssey_ip.png": "scale-[1.25]",
   "/placement/cpec_citi.png":       "scale-[1.15]",
   "/placement/cpec_ms.png":         "scale-[0.85]",
   "/placement/cpec_barclays.svg":   "scale-[1.05]",
