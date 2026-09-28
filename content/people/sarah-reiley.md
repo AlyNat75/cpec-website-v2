@@ -14,4 +14,4 @@ campusInvolvements:
   - Cornell Compensation Club
 ---
 
-Sarah is a Senior Advisor studying Industrial and Labor Relations, serving at President. She has interned at Wells Fargo, as well as Tungsten Partners the year prior. On campus, she is affiliated with the Society for Women in Business, Cornell Compensation Club and the Alpha Phi sorority.
+Sarah is a Senior Advisor studying Industrial and Labor Relations. She has interned at Wells Fargo, as well as Tungsten Partners the year prior. On campus, she is affiliated with the Society for Women in Business, Cornell Compensation Club and the Alpha Phi sorority.
