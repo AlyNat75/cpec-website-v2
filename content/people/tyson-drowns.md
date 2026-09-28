@@ -6,6 +6,8 @@ headshot: /people/tyson3.jpg
 headshotPosition: center 75%
 email: tad234@cornell.edu
 major: Industrial Labor Relations
+workExperience:
+  - Alastar Partners
 gradYear: 2029
 order: 11
 campusInvolvements:
