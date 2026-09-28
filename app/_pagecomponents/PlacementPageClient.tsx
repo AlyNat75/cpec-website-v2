@@ -32,12 +32,17 @@ const GROUPS: Group[] = [
       "/placement/cpec_soloman.png",
       "/placement/cpec_rbc.png",
       "/placement/cpec_macquarie.png",
+      "/placement/cpec_capitalone.png",
+      "/placement/cpec_mdg.png",
       "/placement/cpec_bcg.jpg",
     ],
   },
   {
     label: "Buy-Side",
     logos: [
+      "/placement/cpec_carlyle.png",
+      "/placement/cpec_odyssey.png",
+      "/placement/cpec_rosecliff.png",
       "/placement/cpec_blackrock.jpg",
       "/placement/cpec_ares.png",
       "/placement/cpec_millennium.png",
