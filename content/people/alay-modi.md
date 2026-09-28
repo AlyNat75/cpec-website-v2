@@ -8,7 +8,7 @@ major: Business & Mathematics
 gradYear: 2028
 order: 7
 workExperience:
-  - MD Global Partners (IB)
+  - Noble Investment Group
 campusInvolvements:
   - Akpsi
   - SABA

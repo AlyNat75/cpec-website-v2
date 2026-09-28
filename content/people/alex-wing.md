@@ -9,7 +9,7 @@ major: Applied Economics & Management
 gradYear: 2028
 order: 5
 workExperience:
-  - Jefferies
+  - Incoming Jefferies
 campusInvolvements:
   - Cayuga Capital
   - History Society

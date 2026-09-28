@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <h1 className="text-5xl lg:text-6xl font-normal text-[#0f2242]">{person.name}</h1>
 
             {person.workExperience && person.workExperience.length > 0 ? (
-              <p className="mt-3 text-xl md:text-2xl italic text-neutral-700">{person.workExperience[0]}</p>
+              <p className="mt-3 text-xl md:text-2xl font-semibold text-[#0f2242]">{person.workExperience[0]}</p>
             ) : null}
 
             <div className="mt-10 space-y-5 text-lg md:text-xl leading-relaxed text-neutral-800">

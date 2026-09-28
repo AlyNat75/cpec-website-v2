@@ -8,7 +8,7 @@ major: Government
 gradYear: 2028
 order: 6
 workExperience:
-  - PwC Corporate Finance
+  - Incoming Deutsche Bank
 campusInvolvements:
   - Global Cornell Connection
   - Cornell Lightweight Rowing

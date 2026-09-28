@@ -8,7 +8,7 @@ major: Hotel Administration
 gradYear: 2028
 order: 2
 workExperience:
-  - Barclays
+  - Incoming Barclays
 campusInvolvements:
   - Alpine Ski Team
 ---

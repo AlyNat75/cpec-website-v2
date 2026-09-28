@@ -8,7 +8,7 @@ major: Economics & CS
 gradYear: 2028
 order: 1
 workExperience:
-  - J.P. Morgan
+  - Incoming J.P. Morgan
 campusInvolvements:
   - PCT
 ---
