@@ -9,7 +9,7 @@ major: Industrial Labor Relations
 workExperience:
   - Alastar Partners
 gradYear: 2029
-order: 12
+order: 11
 pastExperience: Capital Solutions Summer Analyst at Alastar Partners
 campusInvolvements:
   - Delta Sigma Pi Business Fraternity

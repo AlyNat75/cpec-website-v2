@@ -2,11 +2,11 @@
 slug: jazlyn-fuentes
 name: Jazlyn Fuentes
 role: Co-VP of Recruitment
-headshot: /people/Jazlyn.jpg
+headshot: /people/jazlyn2.jpg
 email: jkf65@cornell.edu
 major: Dyson
 gradYear: 2029
-order: 11
+order: 10
 workExperience:
   - Plum Alley Ventures
 pastExperience: Venture Capital Summer Analyst at Plum Alley Ventures

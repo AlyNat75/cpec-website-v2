@@ -6,7 +6,7 @@ headshot: /people/alay2.png
 email: aam335@cornell.edu
 major: Business & Mathematics
 gradYear: 2028
-order: 5
+order: 4
 workExperience:
   - Noble Investment Group
 pastExperience: Real Estate Private Equity at Noble Investment Group (2026); Investment Banking at MD Global Partners (2025)
