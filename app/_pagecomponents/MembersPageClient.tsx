@@ -91,7 +91,7 @@ function AnimatedGroups({ groups }: { groups: Group[] }) {
     }, []); // ← fixed
   
     return (
-      <section className="mx-auto w-full max-w-7xl px-6 py-16 md:py-20 space-y-16 text-center">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-20 space-y-16 text-center">
         {groups.map((g, idx) => (
           <div
             key={`${g.label}-${idx}`}
@@ -105,12 +105,12 @@ function AnimatedGroups({ groups }: { groups: Group[] }) {
             ].join(" ")}
           >
             <h2 className="mb-8 text-2xl md:text-3xl font-semibold">{g.label}</h2>
-            <div className="flex flex-wrap justify-center gap-x-10 gap-y-12">
+            <div className="flex flex-wrap justify-center gap-x-16 gap-y-16">
               {g.people.map((p, i) => (
                 <div
                   key={p.href}
                   className={[
-                    "w-full max-w-xs sm:w-[260px] transition-all duration-700 will-change-transform",
+                    "w-full max-w-xs sm:w-[calc(50%-2rem)] lg:w-[300px] transition-all duration-700 will-change-transform",
                     visible[idx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
                   ].join(" ")}
                   style={{ transitionDelay: visible[idx] ? `${100 + i * 60}ms` : "0ms" }}
