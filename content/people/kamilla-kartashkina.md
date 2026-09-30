@@ -8,7 +8,7 @@ major: Economics
 gradYear: 2028
 workExperience:
   - Baring Ventures
-pastExperience: Private Equity Analyst at Baring Ventures; previously GBM Securities and Solidcore Resources
+pastExperience: Baring Ventures, GBM Securities
 campusInvolvements:
   - Kappa Kappa Gamma
 ---

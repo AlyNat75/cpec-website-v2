@@ -8,7 +8,7 @@ major: Dyson
 gradYear: 2029
 workExperience:
   - Cantor Fitzgerald
-pastExperience: Investment Banking Summer Analyst at Cantor Fitzgerald; previously Canvas Property Group and 1823 Partners
+pastExperience: Cantor Fitzgerald, Canvas Property Group
 campusInvolvements:
   - Mutual Investment Club of Cornell
   - Finance Career Catalyst Program
