@@ -13,7 +13,8 @@ export default function Page() {
     people: g.people.map((p) => ({
       name: p.name,
       role: p.role,
-      major: p.major,
+      // Analysts cards show the class year after the major, e.g. "Dyson '29"
+      major: /^\d{4}$/.test(String(p.gradYear)) ? `${p.major} '${String(p.gradYear).slice(-2)}` : p.major,
       headshot: p.headshot,
       headshotPosition: p.headshotPosition,
       href: `/people/${p.slug}`,

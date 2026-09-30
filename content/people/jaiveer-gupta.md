@@ -4,7 +4,7 @@ name: Jay Gupta
 role: Member
 headshot: /people/jaiveer.jpeg
 email: jg2566@cornell.edu
-major: Applied Economics & Management
+major: Dyson
 gradYear: 2029
 workExperience:
   - Cantor Fitzgerald

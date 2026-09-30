@@ -4,7 +4,7 @@ name: Rahil Dundon
 role: Member
 headshot: /people/rahil.jpg
 email: rid29@cornell.edu
-major: Applied Economics & Management
+major: Dyson
 gradYear: 2027
 workExperience:
   - Citibank

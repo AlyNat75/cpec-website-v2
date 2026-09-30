@@ -4,7 +4,7 @@ name: Jazlyn Fuentes
 role: Co-VP of Recruitment
 headshot: /people/Jazlyn.jpg
 email: jkf65@cornell.edu
-major: Applied Economics & Management
+major: Dyson
 gradYear: 2029
 order: 10
 workExperience:

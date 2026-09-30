@@ -5,7 +5,7 @@ role: VP of Professional Development
 headshot: /people/alex.png
 headshotPosition: center 75%
 email: ahw86@cornell.edu
-major: Applied Economics & Management
+major: Dyson
 gradYear: 2028
 order: 5
 workExperience:

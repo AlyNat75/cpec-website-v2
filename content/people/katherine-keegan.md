@@ -4,7 +4,7 @@ name: Katherine Keegan
 role: Member
 headshot: /people/katherine.png
 email: kk2255@cornell.edu
-major: Applied Economics & Management
+major: Dyson
 gradYear: 2028
 workExperience:
   - Citi Sales & Trading

@@ -4,7 +4,7 @@ name: Steven Teh
 role: Member
 headshot: /people/steven-centered.png
 email: smt266@cornell.edu
-major: Applied Economics & Management
+major: Dyson
 gradYear: 2027
 workExperience:
   - Incoming Investment Banking Analyst at Centerview Partners

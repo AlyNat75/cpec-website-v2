@@ -4,7 +4,7 @@ name: Daphne Hix
 role: Member
 headshot: /people/daphne.png
 email: dmh363@cornell.edu
-major: Applied Economics & Management
+major: Dyson
 gradYear: 2029
 ---
 
