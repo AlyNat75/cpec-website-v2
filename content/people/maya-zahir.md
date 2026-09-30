@@ -7,7 +7,7 @@ email: mz626@cornell.edu
 major: Economics & Information Science
 gradYear: 2028
 workExperience:
-  - UBS
+  - Incoming Investment Banking Summer Analyst at UBS
 campusInvolvements:
   - SABA
   - SWIB
