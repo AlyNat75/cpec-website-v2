@@ -8,9 +8,7 @@ major: Agricultural Sciences
 gradYear: 2028
 workExperience:
   - Bank of America
-campusInvolvements:
-  - Cornell Latinos in Business
-  - Varsity Men's Polo
+pastExperience: Investment Banking at Bank of America
 ---
 
 Bruno is a Junior studying Agricultural Sciences in CALS. He interned at Bank of America this past summer in the Investment Banking division.

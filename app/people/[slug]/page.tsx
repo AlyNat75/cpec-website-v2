@@ -20,8 +20,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const person = getPersonBySlug(slug);
   if (!person) notFound();
 
-  // The bio is the markdown body under the front matter; blank lines split paragraphs
-  const bio = (person.content ?? "").split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+  // Labeled rows under the headline; empty ones are skipped
+  const year = /^\d{4}$/.test(String(person.gradYear)) ? ` '${String(person.gradYear).slice(-2)}` : "";
+  const details = [
+    ["Major", `${person.major}${year}`],
+    ["Past Summer Experience", person.pastExperience],
+    ["Campus Involvements", person.campusInvolvements?.join(", ")],
+    ["Interests", person.interests],
+  ].filter((row): row is [string, string] => Boolean(row[1]));
   const firstName = person.name.split(" ")[0];
 
   return (
@@ -32,42 +38,45 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <div className="mx-auto w-full max-w-7xl px-6 pt-36 md:pt-40 pb-20">
 
         {/* 2-column half/half layout on desktop */}
-        <article className="grid grid-cols-1 md:grid-cols-2 items-start gap-10 lg:gap-16">
+        <article className="grid grid-cols-1 items-start gap-10 md:grid-cols-[minmax(0,460px)_1fr] lg:gap-14">
 
           {/* Left: headshot */}
-          <div className="relative justify-self-start w-full md:w-full md:max-w-[420px] lg:max-w-[460px] xl:max-w-[500px] h-[390px] md:h-[470px] lg:h-[550px] overflow-hidden">
+          <div className="relative w-full h-[390px] md:h-[500px] lg:h-[560px] overflow-hidden">
             <Image
               src={person.headshot}
               alt={`Headshot of ${person.name}`}
               fill
               className="object-cover"
               style={{ objectPosition: person.headshotPosition ?? "center 20%" }}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 460px"
             />
           </div>
 
-          {/* Right: name, internship, bio, contact */}
-          <div className="flex-1 text-neutral-900 md:pl-6 lg:pl-10 xl:pl-14 md:pt-4 lg:pt-8 xl:pt-10">
+          {/* Right: name, headline role, then labeled details */}
+          <div className="text-neutral-900 md:pt-2">
             <h1 className="text-5xl lg:text-6xl font-normal text-[#161439]">{person.name}</h1>
 
             {person.workExperience && person.workExperience.length > 0 ? (
               <p className="mt-3 text-xl md:text-2xl font-semibold text-[#e2703a]">{person.workExperience[0]}</p>
             ) : null}
 
-            <div className="mt-10 space-y-5 text-lg md:text-xl leading-relaxed text-neutral-800">
-              {bio.map((para, i) => (
-                <p key={i}>{para}</p>
+            <dl className="mt-8 space-y-3 text-lg md:text-xl leading-relaxed text-neutral-800">
+              {details.map(([label, value]) => (
+                <div key={label}>
+                  <dt className="inline font-semibold text-neutral-900">{label}: </dt>
+                  <dd className="inline">{value}</dd>
+                </div>
               ))}
+            </dl>
 
-              {person.email ? (
-                <p className="pt-2">
-                  {firstName} can be reached at{" "}
-                  <a className="text-[#161439] underline underline-offset-2" href={`mailto:${person.email}`}>
-                    {person.email}
-                  </a>
-                </p>
-              ) : null}
-            </div>
+            {person.email ? (
+              <p className="mt-8 text-lg md:text-xl text-neutral-800">
+                {firstName} can be reached at{" "}
+                <a className="text-[#161439] underline underline-offset-2" href={`mailto:${person.email}`}>
+                  {person.email}
+                </a>
+              </p>
+            ) : null}
           </div>
         </article>
       </div>

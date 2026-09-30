@@ -7,9 +7,10 @@ email: smt266@cornell.edu
 major: Dyson
 gradYear: 2027
 workExperience:
-  - Incoming Investment Banking Analyst at Centerview Partners
+  - Incoming 2027 Investment Banking Analyst at Centerview Partners
+pastExperience: Investment Banking at Centerview Partners
 campusInvolvements:
-  - CFA
+  - Cornell Financial Analysts
   - Alpha Fund
   - Fencing
 ---

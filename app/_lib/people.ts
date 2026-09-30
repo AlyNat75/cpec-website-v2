@@ -13,6 +13,8 @@ export type Person = {
   gradYear: number | string; // allow strings like "Alumni"
   workExperience?: string[];
   campusInvolvements?: string[];
+  pastExperience?: string;
+  interests?: string;
   classYearLabel?: string;
   order?: number;
   content?: string;
@@ -84,6 +86,8 @@ function normalizePerson(raw: Record<string, unknown>, content: string): Person 
     gradYear: typeof raw.gradYear === "number" ? raw.gradYear : String(raw.gradYear),
     workExperience: toArray(raw.workExperience),
     campusInvolvements: toArray(raw.campusInvolvements),
+    pastExperience: raw.pastExperience ? String(raw.pastExperience) : undefined,
+    interests: raw.interests ? String(raw.interests) : undefined,
     classYearLabel: raw.classYearLabel ? String(raw.classYearLabel) : undefined,
     order: raw.order != null ? Number(raw.order) : undefined,
     content,

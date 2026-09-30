@@ -8,10 +8,12 @@ major: Dyson
 gradYear: 2027
 workExperience:
   - Millennium
+pastExperience: Tech Business Management Intern at Millennium
 campusInvolvements:
-  - DUC
-  - CJL
-  - Sephardi & Mizrahi Council
+  - Sephardi & Mizrahi Council (President)
+  - Dyson Undergraduate Council (VP of Student Development)
+  - Spreadsheet Modeling Teaching Assistant
+  - Cornell Game Changers
 ---
 
 Gavin is a Senior studying Applied Economics and Management. He spent this past summer at Millennium as a Tech Business Management Intern. On campus he is associated with Sephardi & Mizrahi Council (President), Dyson Undergraduate Council (VP of Student Development), Spreadsheet Modeling Teaching Assistant and Cornell Game Changers.

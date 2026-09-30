@@ -7,9 +7,11 @@ email: dei22@cornell.edu
 major: Dyson
 gradYear: 2027
 workExperience:
-  - Rothschild & Co.
+  - Incoming 2027 Investment Banking Analyst at Rothschild & Co
 campusInvolvements:
-  - Cornell Hedge Fund
+  - Cornell Hedge Fund (President)
+  - Cornell Ski Club
+  - Cornell Rowing Club
   - DEBUT Biomedical Engineering Project Team
 ---
 

@@ -9,9 +9,11 @@ gradYear: 2027
 order: 3
 workExperience:
   - Wells Fargo
+pastExperience: Wells Fargo; previously Tungsten Partners
 campusInvolvements:
   - Society for Women in Business
   - Cornell Compensation Club
+  - Alpha Phi
 ---
 
 Sarah is a Senior Advisor studying Industrial and Labor Relations. She has interned at Wells Fargo, as well as Tungsten Partners the year prior. On campus, she is affiliated with the Society for Women in Business, Cornell Compensation Club and the Alpha Phi sorority.

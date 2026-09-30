@@ -8,10 +8,12 @@ major: Industrial Labor Relations
 gradYear: 2027
 workExperience:
   - Willkie Farr & Gallagher LLP
+pastExperience: General Counsel Intern at Willkie Farr & Gallagher LLP
 campusInvolvements:
+  - Phi Alpha Delta Pre-Law Fraternity
+  - ILR Women's Caucus
   - CREDIT
-  - ILR Womens Caucus
-  - PAD
+  - Women's Law Coalition
 ---
 
 

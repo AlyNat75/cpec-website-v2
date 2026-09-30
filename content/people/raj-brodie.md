@@ -8,6 +8,7 @@ major: Economics
 gradYear: 2028
 workExperience:
   - Capital One
+pastExperience: Capital One; previously Covara Capital
 campusInvolvements:
   - Diversity on the Street
   - Cornell Investments Club
