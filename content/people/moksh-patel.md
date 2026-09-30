@@ -6,7 +6,7 @@ headshot: /people/moksh.png
 email: mp2349@cornell.edu
 major: Hotel Administration
 gradYear: 2028
-order: 2
+order: 3
 workExperience:
   - Incoming 2027 Investment Banking Summer Analyst at Barclays
 pastExperience: Private Credit Summer Analyst at Man Varagon

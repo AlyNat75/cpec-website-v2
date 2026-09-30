@@ -6,7 +6,7 @@ headshot: /people/charlie.jpg
 email: cac559@cornell.edu
 major: Dyson
 gradYear: 2029
-order: 15
+order: 13
 pastExperience: Distressed Hedge Fund
 campusInvolvements:
   - Cornell Daily Sun

@@ -6,7 +6,7 @@ headshot: /people/sarah.JPG
 email: slr252@cornell.edu
 major: Industrial Labor Relations
 gradYear: 2027
-order: 3
+order: 2
 workExperience:
   - Wells Fargo
 pastExperience: Wells Fargo (2026); Tungsten Partners (2025)

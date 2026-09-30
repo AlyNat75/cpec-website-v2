@@ -7,7 +7,7 @@ headshotPosition: center 75%
 email: an546@cornell.edu
 major: Computer Science
 gradYear: 2027
-order: 14
+order: 9
 workExperience:
   - Boston Consulting Group
 pastExperience: Summer Associate (TMT) at Boston Consulting Group

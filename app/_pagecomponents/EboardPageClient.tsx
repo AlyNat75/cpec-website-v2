@@ -28,9 +28,9 @@ export default function EboardPageClient({ cards }: { cards: Card[] }) {
 }
 
 function AnimatedGrid({ cards }: { cards: Card[] }) {
-  // Split into rows of 4 so each row animates when it enters the viewport
+  // Split into rows of 3 so each row animates when it enters the viewport
   const rows: Card[][] = [];
-  for (let i = 0; i < cards.length; i += 4) rows.push(cards.slice(i, i + 4));
+  for (let i = 0; i < cards.length; i += 3) rows.push(cards.slice(i, i + 3));
 
   const rowRefs = useRef<HTMLDivElement[]>([]);
   const [visibleRow, setVisibleRow] = useState<Record<number, boolean>>({});
@@ -53,7 +53,7 @@ function AnimatedGrid({ cards }: { cards: Card[] }) {
   }, []);
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 py-16 md:py-20 text-center">
+    <section className="mx-auto w-full max-w-6xl px-6 py-16 md:py-20 text-center">
       {rows.map((row, rowIdx) => (
         <div
           key={rowIdx}
@@ -62,7 +62,7 @@ function AnimatedGrid({ cards }: { cards: Card[] }) {
             if (el) rowRefs.current[rowIdx] = el;
           }}
           className={[
-            "flex flex-wrap justify-center gap-x-10 gap-y-12 mb-12 transition-all duration-700",
+            "flex flex-wrap justify-center gap-x-16 gap-y-16 mb-16 transition-all duration-700",
             visibleRow[rowIdx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
           ].join(" ")}
         >
@@ -70,7 +70,7 @@ function AnimatedGrid({ cards }: { cards: Card[] }) {
             <div
               key={c.href}
               className={[
-                "w-full max-w-xs sm:w-[260px] transition-all duration-700",
+                "w-full max-w-xs sm:w-[calc(50%-2rem)] lg:w-[300px] transition-all duration-700",
                 visibleRow[rowIdx] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
               ].join(" ")}
               style={{ transitionDelay: visibleRow[rowIdx] ? `${100 + i * 60}ms` : "0ms" }}
