@@ -8,7 +8,7 @@ major: Economics
 gradYear: 2029
 order: 8
 workExperience:
-  - Convergent Finance LLP
+  - Convergent Finance LLP; 93 East Capital LLC
 pastExperience: Private Equity Summer Analyst at Convergent Finance LLP
 campusInvolvements:
   - Division 1 Men's Varsity Squash Team
@@ -16,6 +16,7 @@ campusInvolvements:
   - Cornell Trading Club
   - Student Athlete Advisory Committee
   - Big Red Leaders Program
+  - Student Athlete Tutor
 interests: Driving Cars, Poker, Rewatching Shows
 ---
 
