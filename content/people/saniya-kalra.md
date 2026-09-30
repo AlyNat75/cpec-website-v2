@@ -14,6 +14,7 @@ campusInvolvements:
   - Hotel Ezra
   - Cornell Mergers & Acquisitions Club
   - Cornell Real Estate Club
+  - Alpha Phi Sorority
 ---
 
 Saniya is a Senior studying Hotel Administration, serving as Vice President for DEI. She has interned at Lazard. On campus, she is involved in Hotel Ezra, the Cornell Mergers and Acquisitions Club, and Cornell Real Estate Club.

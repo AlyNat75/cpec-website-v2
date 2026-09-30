@@ -12,7 +12,7 @@ workExperience:
 pastExperience: Wealth Management at Hartz Capital
 campusInvolvements:
   - Banking at Cornell
-  - Society for Women in Business
+  - SWIB
   - Cayuga Capital (VP of Fellowship)
   - Alpha Xi Delta
 interests: Basketball, Karate, Coffee, Long Walks

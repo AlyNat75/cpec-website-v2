@@ -8,6 +8,7 @@ major: Dyson
 gradYear: 2027
 workExperience:
   - Incoming 2027 Investment Banking Analyst at Rothschild & Co
+pastExperience: Investment Banking Summer Analyst at Rothschild & Co
 campusInvolvements:
   - Cornell Hedge Fund (President)
   - Cornell Ski Club
