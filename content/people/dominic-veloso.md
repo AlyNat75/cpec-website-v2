@@ -8,7 +8,7 @@ major: Economics
 gradYear: 2029
 workExperience:
   - J.P. Morgan Wealth Management
-pastExperience: Alger; previously Private Equity Intern at Centerbridge Partners
+pastExperience: Alger (2026); Private Equity Intern at Centerbridge Partners (2025)
 campusInvolvements:
   - Division 1 Men's Varsity Lacrosse
   - Cornell Mergers & Acquisitions Club

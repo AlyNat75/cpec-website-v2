@@ -9,7 +9,7 @@ gradYear: 2027
 order: 3
 workExperience:
   - Wells Fargo
-pastExperience: Wells Fargo; previously Tungsten Partners
+pastExperience: Wells Fargo (2026); Tungsten Partners (2025)
 campusInvolvements:
   - Society for Women in Business
   - Cornell Compensation Club

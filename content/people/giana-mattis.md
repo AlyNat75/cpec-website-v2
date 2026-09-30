@@ -8,7 +8,7 @@ major: Dyson
 gradYear: 2027
 workExperience:
   - J.P. Morgan
-pastExperience: Investment Banking Analyst at J.P. Morgan; previously Private Equity Summer Analyst at Odyssey Investment Partners
+pastExperience: Investment Banking Analyst at J.P. Morgan (2026); Private Equity Summer Analyst at Odyssey Investment Partners (2025)
 campusInvolvements:
   - Cornell Financial Analysts
   - BlackGen Capital (VP of Recruitment)
