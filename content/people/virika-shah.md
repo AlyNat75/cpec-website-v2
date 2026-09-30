@@ -7,7 +7,7 @@ email: vvs28@cornell.edu
 major: Economics
 gradYear: 2029
 workExperience:
-  - Kotak Mahindra Capital Company
+  - Kotak Mahindra Bank
 campusInvolvements:
   - Cornell Hedge Fund
   - Impact Investing at Cornell
