@@ -60,11 +60,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <p className="mt-3 text-xl md:text-2xl font-semibold text-[#e2703a]">{person.workExperience[0]}</p>
             ) : null}
 
-            <dl className="mt-8 space-y-3 text-lg md:text-xl leading-relaxed text-neutral-800">
+            {/* CIBC-style: highlighted heading on its own line, value underneath */}
+            <dl className="mt-8 space-y-6 text-lg md:text-xl leading-relaxed text-neutral-800">
               {details.map(([label, value]) => (
                 <div key={label}>
-                  <dt className="inline font-semibold text-neutral-900">{label}: </dt>
-                  <dd className="inline">{value}</dd>
+                  <dt className="inline-block bg-neutral-200/70 px-1.5 font-semibold text-neutral-900">{label}</dt>
+                  <dd className="mt-1">{value}</dd>
                 </div>
               ))}
             </dl>
