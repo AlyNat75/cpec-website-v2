@@ -4,7 +4,7 @@ name: Hadley Earl
 role: Member
 headshot: /people/hadley.png
 email: hte8@cornell.edu
-major: Hotel
+major: Hotel Administration
 gradYear: 2028
 workExperience:
   - Incoming Investment Banking Summer Analyst at Morgan Stanley

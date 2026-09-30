@@ -40,7 +40,7 @@ const GROUPS: Group[] = [
   {
     label: "Buy-Side",
     logos: [
-      "/placement/cpec_carlyle.png",
+      "/placement/cpec_stepstone.png",
       "/placement/cpec_odyssey_ip.png",
       "/placement/cpec_rosecliff.png",
       "/placement/bdt.png",
