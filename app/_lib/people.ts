@@ -149,9 +149,10 @@ export function getExecutiveBoard(): Person[] {
     });
 }
 
-// Everyone, E-board included — board members also appear under their class year
+// Everyone, E-board included — board members also appear under their class year.
+// Senior Advisors appear only on the Executive Board page.
 export function getMembers(): Person[] {
-  const members = getAllPeople();
+  const members = getAllPeople().filter((p) => !/senior advisor/i.test(p.role));
   return members.slice().sort((a, b) => {
     const ay = a.gradYear;
     const by = b.gradYear;
