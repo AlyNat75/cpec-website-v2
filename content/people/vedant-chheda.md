@@ -9,7 +9,7 @@ gradYear: 2029
 order: 8
 workExperience:
   - Convergent Finance LLP
-pastExperience: Private Equity Summer Analyst at Convergent Finance LLP; 93 East Capital LLC
+pastExperience: Private Equity Summer Analyst at Convergent Finance LLP
 campusInvolvements:
   - Division 1 Men's Varsity Squash Team
   - Cornell 400 Club
