@@ -64,7 +64,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <dl className="mt-8 space-y-6 text-lg md:text-xl leading-relaxed text-neutral-800">
               {details.map(([label, value]) => (
                 <div key={label}>
-                  <dt className="inline-block bg-neutral-200/70 px-1.5 font-semibold text-neutral-900">{label}</dt>
+                  <dt className="inline-block bg-neutral-200/70 px-1.5 font-semibold text-[#161439]">{label}</dt>
                   <dd className="mt-1">{value}</dd>
                 </div>
               ))}
