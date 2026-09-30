@@ -8,7 +8,7 @@ major: Dyson
 gradYear: 2027
 workExperience:
   - Citibank
-pastExperience: Citi
+pastExperience: Investment Banking at Citi
 campusInvolvements:
   - Varsity Rowing
 ---

@@ -9,7 +9,7 @@ gradYear: 2028
 order: 7
 workExperience:
   - Noble Investment Group
-pastExperience: Real Estate Private Equity at Noble Investment Group; previously Investment Banking at MD Global Partners
+pastExperience: Real Estate Private Equity at Noble Investment Group (2026); Investment Banking at MD Global Partners (2025)
 campusInvolvements:
   - Alpha Kappa Psi Professional Business Fraternity
   - Pi Kappa Alpha (President)

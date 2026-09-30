@@ -12,7 +12,6 @@ pastExperience: Investment Banking at Solomon Partners
 campusInvolvements:
   - Cornell Hedge Fund Club
   - Club Golf
-  - CPEC (former VP of NME)
 ---
 
 Akshat is a Senior studying ORIE and previously served as VP of NME at CPEC. He interned in Investment Banking at Solomon Partners this past summer. On campus he is involved with the Cornell Hedge Fund Club and Club Golf.

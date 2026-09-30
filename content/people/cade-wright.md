@@ -14,6 +14,8 @@ campusInvolvements:
   - Delta Upsilon Fraternity
   - Cornell NICE Club
 interests: Working Out, Fishing, Hunting, Basketball, Football
+workExperience:
+  - LWYRD
 ---
 
 Cade is a Sophomore studying Engineering, serving as Vice President. He interned at LWYRD. On campus, he is also affiliated with Army ROTC, the Delta Upsilon Fraternity, and the Cornell NICE Club. In his free time, Cade enjoys working out, fishing, hunting, basketball, and football.
