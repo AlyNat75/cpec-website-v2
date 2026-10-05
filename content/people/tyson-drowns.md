@@ -2,7 +2,7 @@
 slug: tyson-drowns
 name: Tyson Drowns
 role: VP of Finance
-headshot: /people/tyson-drowns-z3.jpg
+headshot: /people/tyson-drowns-z4.jpg
 email: tad234@cornell.edu
 major: Industrial Labor Relations
 workExperience:
