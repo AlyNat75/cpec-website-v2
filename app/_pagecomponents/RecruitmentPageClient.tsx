@@ -20,8 +20,8 @@ const EVENTS: { title: string; date: string; time: string; location: string }[] 
 const PROCESS_STEPS = [
   {
     title: "Talk & Learn",
-    image: "/media/recruit-talk-learn.jpg",
-    alt: "CPEC members talking on the steps under a campus arch",
+    image: "/media/recruit-talk-learn-2.jpg",
+    alt: "CPEC members chatting on the steps under a campus arch",
     body:
       "Get to know us at info sessions, coffee chats, and our recruitment events. Ask our members anything, from what New Member Education covers to how we analyze deals and how the club supports you through recruiting. It's the best way to see whether CPEC is the right fit for you.",
   },
