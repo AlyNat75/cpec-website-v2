@@ -63,7 +63,7 @@ export default function HomePage() {
         <div className={["grid grid-cols-1 md:grid-cols-[1.35fr_1fr] gap-10 md:gap-14 items-center transition-all duration-700 ease-out", showAbout ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
           <div className="relative aspect-4/3 overflow-hidden">
             <Image
-              src="/media/cpec_fullclub.png"
+              src="/media/cpec_fullclub_f26.jpg"
               alt="CPEC members outside an iconic Cornell archway"
               fill
               className="object-cover"

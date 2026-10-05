@@ -2,7 +2,7 @@
 slug: bruno-abucham
 name: Bruno Abucham
 role: Member
-headshot: /people/bruno.png
+headshot: /people/bruno-abucham-f26.jpg
 email: bd448@cornell.edu
 major: Agricultural Sciences
 gradYear: 2028

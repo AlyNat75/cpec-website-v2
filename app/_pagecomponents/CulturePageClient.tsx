@@ -17,6 +17,7 @@ const PHOTOS: { src: string; alt: string; zoom?: number }[] = [
   { src: "/media/culture/culture-arch-window.jpg", alt: "CPEC members in suits on campus", zoom: 1.25 },
   { src: "/media/culture/culture-halloween.jpg", alt: "CPEC members in Halloween costumes" },
   { src: "/media/culture/culture-selfie.jpg", alt: "CPEC members out together" },
+  { src: "/media/culture/culture-arches-trio.jpg", alt: "CPEC members under the arches" },
 ];
 
 export default function CulturePageClient() {

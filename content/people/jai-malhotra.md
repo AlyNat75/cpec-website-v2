@@ -2,7 +2,7 @@
 slug: jai-malhotra
 name: Jai Malhotra
 role: Co-President
-headshot: /people/jai.png
+headshot: /people/jai-malhotra-f26.jpg
 email: jsm456@cornell.edu
 major: Economics & CS
 gradYear: 2028

@@ -2,7 +2,7 @@
 slug: daphne-hix
 name: Daphne Hix
 role: Member
-headshot: /people/daphne.png
+headshot: /people/daphne-hix-f26.jpg
 email: dmh363@cornell.edu
 major: Dyson
 gradYear: 2029

@@ -2,7 +2,7 @@
 slug: will-he
 name: Will He
 role: Member
-headshot: /people/will.png
+headshot: /people/will-he-f26.jpg
 email: wzh3@cornell.edu
 major: Hotel Administration
 gradYear: 2029

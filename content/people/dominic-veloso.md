@@ -2,7 +2,7 @@
 slug: dominic-veloso
 name: Dominic Veloso
 role: Member
-headshot: /people/dominic.png
+headshot: /people/dominic-veloso-f26.jpg
 email: dav78@cornell.edu
 major: Economics
 gradYear: 2029

@@ -2,7 +2,7 @@
 slug: antonia-valdes
 name: Antonia Valdes
 role: Member
-headshot: /people/antonia.png
+headshot: /people/antonia-valdes-f26.jpg
 email: av627@cornell.edu
 major: Dyson
 gradYear: 2029

@@ -2,7 +2,7 @@
 slug: charlie-clark
 name: Charlie Clark
 role: VP of Public Relations
-headshot: /people/charlie.jpg
+headshot: /people/charlie-clark-f26.jpg
 email: cac559@cornell.edu
 major: Dyson
 gradYear: 2029

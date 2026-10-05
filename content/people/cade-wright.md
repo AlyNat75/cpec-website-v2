@@ -2,8 +2,7 @@
 slug: cade-wright
 name: Cade Wright
 role: Vice President
-headshot: /people/cade.png
-headshotPosition: center 75%
+headshot: /people/cade-wright-f26.jpg
 email: cbw85@cornell.edu
 major: Engineering
 gradYear: 2029

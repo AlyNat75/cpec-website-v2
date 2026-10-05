@@ -2,7 +2,7 @@
 slug: moksh-patel
 name: Moksh Patel
 role: Co-President
-headshot: /people/moksh.png
+headshot: /people/moksh-patel-f26.jpg
 email: mp2349@cornell.edu
 major: Hotel Administration
 gradYear: 2028
