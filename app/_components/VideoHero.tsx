@@ -13,7 +13,7 @@ export default function VideoHero() {
   return (
     <section
       className="relative w-full overflow-hidden"
-      style={{ height: "86vh", minHeight: "560px" }}
+      style={{ height: "100svh", minHeight: "560px" }}
     >
       {/* Background video (darkened via filters for contrast) */}
       <video
@@ -50,6 +50,13 @@ export default function VideoHero() {
             className="text-white border-2 border-white hover:bg-white/15 rounded-full px-8 py-3 text-sm md:text-base font-semibold uppercase tracking-wider min-h-12"
           >
             LEARN MORE
+          </Link>
+
+          <Link
+            href="/eboard"
+            className="text-white border-2 border-white hover:bg-white/15 rounded-full px-8 py-3 text-sm md:text-base font-semibold uppercase tracking-wider min-h-12"
+          >
+            MEET THE TEAM
           </Link>
         </div>
       </div>
