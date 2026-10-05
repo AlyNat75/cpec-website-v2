@@ -2,7 +2,7 @@
 slug: jaiveer-gupta
 name: Jay Gupta
 role: Member
-headshot: /people/jaiveer.jpeg
+headshot: /people/jaiveer-gupta-arch.jpg
 email: jg2566@cornell.edu
 major: Dyson
 gradYear: 2029
