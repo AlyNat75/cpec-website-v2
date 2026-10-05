@@ -2,7 +2,7 @@
 slug: vedant-chheda
 name: Vedant Chheda
 role: VP of Internal Affairs
-headshot: /people/vedant-chheda-z3.jpg
+headshot: /people/vedant-chheda-z4.jpg
 email: vc376@cornell.edu
 major: Economics
 gradYear: 2029
