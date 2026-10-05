@@ -16,6 +16,24 @@ const EVENTS: { title: string; date: string; time: string; location: string }[] 
   { title: "Interview Round 2",                date: "Friday, September 18",   time: "6PM", location: "Invite Only / TBD" },
 ];
 
+/* ---------- Recruitment process (two steps) ---------- */
+const PROCESS_STEPS = [
+  {
+    title: "Talk & Learn",
+    image: "/media/recruit-talk-learn.jpg",
+    alt: "CPEC members talking on the steps under a campus arch",
+    body:
+      "Get to know us at info sessions, coffee chats, and our recruitment events. Ask our members anything, from what New Member Education covers to how we analyze deals and how the club supports you through recruiting. It's the best way to see whether CPEC is the right fit for you.",
+  },
+  {
+    title: "Interview",
+    image: "/media/recruit-interview.jpg",
+    alt: "The CPEC executive board on the steps under a campus arch",
+    body:
+      "After you apply, selected candidates are invited to interview with our executive board. It's our chance to get to know you beyond your resume, including how you think, what drives you, and why private equity, and your chance to meet the people you'd be working alongside.",
+  },
+];
+
 /* ---------- Preparation resources (accordion) ---------- */
 const RESOURCES: { title: string; items: { label: string; href?: string }[] }[] = [
   {
@@ -124,6 +142,22 @@ export default function RecruitmentPageClient() {
           <p className="mt-8 text-sm text-white/70">
             *Subject to change. Room details will be posted on our socials.
           </p>
+        </div>
+      </section>
+
+      {/* Our Recruitment Process — two photo columns with a short explanation each */}
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
+        <h2 className="text-center text-4xl md:text-5xl font-normal text-[#161439]">Our Recruitment Process</h2>
+        <div className="mt-14 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-12">
+          {PROCESS_STEPS.map((step) => (
+            <div key={step.title} className="text-center">
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image src={step.image} alt={step.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              </div>
+              <h3 className="mt-8 text-3xl md:text-4xl font-normal uppercase tracking-wide text-[#161439]">{step.title}</h3>
+              <p className="mx-auto mt-4 max-w-xl text-lg md:text-xl leading-relaxed text-neutral-800">{step.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 

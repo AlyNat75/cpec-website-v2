@@ -7,10 +7,10 @@ import Banner from "../_components/Banner";
 import Footer from "../_components/Footer";
 
 // Photo wall — add a file to public/media/culture and list it here
-const PHOTOS: { src: string; alt: string; zoom?: number }[] = [
+const PHOTOS: { src: string; alt: string; zoom?: number; position?: string }[] = [
   { src: "/media/culture/culture-dinner.jpg", alt: "CPEC members at an outdoor dinner" },
   { src: "/media/culture/culture-arches-trio.jpg", alt: "CPEC members under the arches" },
-  { src: "/media/culture/culture-apartment.jpg", alt: "CPEC members at a get-together" },
+  { src: "/media/culture/culture-apartment.jpg", alt: "CPEC members at a get-together", position: "15% center" },
   { src: "/media/culture/culture-bar.jpg", alt: "CPEC members out for dinner" },
   { src: "/media/culture/culture-ski.jpg", alt: "CPEC members on a ski trip" },
   { src: "/media/culture/culture-group-night.jpg", alt: "CPEC members at a night out" },
@@ -58,7 +58,7 @@ export default function CulturePageClient() {
               ].join(" ")}
               style={{ transitionDelay: show ? `${80 + i * 70}ms` : "0ms" }}
             >
-              <Image src={p.src} alt={p.alt} fill className="object-cover" style={p.zoom ? { transform: `scale(${p.zoom})` } : undefined} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 40vw" />
+              <Image src={p.src} alt={p.alt} fill className="object-cover" style={{ transform: p.zoom ? `scale(${p.zoom})` : undefined, objectPosition: p.position }} sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 40vw" />
             </div>
           ))}
         </div>
