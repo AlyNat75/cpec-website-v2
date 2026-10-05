@@ -2,7 +2,7 @@
 slug: akshat-agarwal
 name: Akshat Agarwal
 role: Member
-headshot: /people/akshat.png
+headshot: /people/akshat-agarwal-f26b.jpg
 email: aga55@cornell.edu
 major: ORIE
 gradYear: 2027

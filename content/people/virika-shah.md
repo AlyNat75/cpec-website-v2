@@ -2,7 +2,7 @@
 slug: virika-shah
 name: Virika Shah
 role: Member
-headshot: /people/virika-shah-f26.jpg
+headshot: /people/virika-shah-f26b.jpg
 email: vvs28@cornell.edu
 major: Economics
 gradYear: 2029

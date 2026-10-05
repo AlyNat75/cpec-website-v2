@@ -2,7 +2,7 @@
 slug: kamilla-kartashkina
 name: Kamilla Kartashkina
 role: Member
-headshot: /people/kamilla-kartashkina-f26.jpg
+headshot: /people/kamilla-kartashkina-f26b.jpg
 email: kk2244@cornell.edu
 major: Economics
 gradYear: 2028
