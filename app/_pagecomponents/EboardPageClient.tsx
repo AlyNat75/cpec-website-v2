@@ -20,7 +20,7 @@ export default function EboardPageClient({ cards }: { cards: Card[] }) {
   return (
     <main>
       <NavBar forceSolid />
-      <Banner title="Executive Board" imageSrc="/media/cpec_eboard_banner_f26.jpg" imagePosition="center 70%" titleClassName="text-4xl md:text-6xl" />
+      <Banner title="Executive Board" imageSrc="/media/cpec_eboard_banner_f26b.jpg" imagePosition="center 62%" titlePlacement="top" titleClassName="text-4xl md:text-6xl" />
       <AnimatedGrid cards={cards} />
       <Footer />
     </main>
