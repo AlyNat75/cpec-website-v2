@@ -30,7 +30,7 @@ const PROCESS_STEPS = [
     image: "/media/recruit-interview-4.jpg",
     alt: "The CPEC executive board on the steps under a campus arch",
     body:
-      "After you apply, selected candidates are invited to interview with our executive board. It's our chance to get to know you beyond your resume, including how you think, what drives you, and why private equity, and your chance to meet the people you'd be working alongside.",
+      "After you apply, selected candidates are invited to interview with our members. It's our chance to get to know you beyond your resume, including how you think, what drives you, and why private equity, and your chance to meet the people you'd be working alongside.",
   },
 ];
 
