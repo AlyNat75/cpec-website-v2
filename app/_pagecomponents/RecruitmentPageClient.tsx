@@ -19,7 +19,7 @@ const EVENTS: { title: string; date: string; time: string; location: string }[] 
 /* ---------- Recruitment process (two steps) ---------- */
 const PROCESS_STEPS = [
   {
-    title: "Talk & Learn",
+    title: "Chat title: "Talk & Learn", Learn",
     image: "/media/recruit-talk-learn-2.jpg",
     alt: "CPEC members chatting on the steps under a campus arch",
     body:
