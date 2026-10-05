@@ -1,6 +1,7 @@
 "use client";
 
 import NavBar from "../_components/NavBar";
+import Banner from "../_components/Banner";
 import Footer from "../_components/Footer";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -27,8 +28,8 @@ const PROCESS_STEPS = [
   },
   {
     title: "Interview",
-    image: "/media/recruit-interview-4.jpg",
-    alt: "The CPEC executive board on the steps under a campus arch",
+    image: "/media/recruit-interview-5.jpg",
+    alt: "Five CPEC members in suits under a stone archway",
     body:
       "After you apply, selected candidates are invited to interview with our members. It's our chance to get to know you beyond your resume, including how you think, what drives you, and why private equity, and your chance to meet the people you'd be working alongside.",
   },
@@ -92,10 +93,11 @@ export default function RecruitmentPageClient() {
   return (
     <main className="min-h-screen bg-white">
       <NavBar forceSolid />
+      <Banner title="Recruitment" imageSrc="/media/recruitment-banner-2.jpg" imagePosition="center 25%" titlePlacement="top" tall titleClassName="text-4xl md:text-6xl" />
 
       {/* Our Recruitment Process — two photo columns with a short explanation each */}
-      <section className="mx-auto w-full max-w-7xl px-6 pb-20 md:pb-28" style={{ paddingTop: "calc(var(--nav-height) + 4rem)" }}>
-        <h1 className="text-center text-4xl md:text-5xl font-normal text-[#161439]">Our Recruitment Process</h1>
+      <section className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
+        <h2 className="text-center text-4xl md:text-5xl font-normal text-[#161439]">Our Recruitment Process</h2>
         <div className="mt-14 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-12">
           {PROCESS_STEPS.map((step) => (
             <div key={step.title} className="text-center">
