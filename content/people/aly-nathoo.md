@@ -2,7 +2,7 @@
 slug: aly-nathoo
 name: Aly Nathoo
 role: VP of Social Events
-headshot: /people/aly-nathoo-f26b.jpg
+headshot: /people/aly-nathoo-z.jpg
 email: an546@cornell.edu
 major: Computer Science
 gradYear: 2027

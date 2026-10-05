@@ -2,7 +2,7 @@
 slug: davis-ingersoll
 name: Davis Ingersoll
 role: Member
-headshot: /people/davis3.png
+headshot: /people/davis-ingersoll-z.jpg
 email: dei22@cornell.edu
 major: Dyson
 gradYear: 2027

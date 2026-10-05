@@ -2,7 +2,7 @@
 slug: saniya-kalra
 name: Saniya Kalra
 role: VP of DEI
-headshot: /people/saniya.png
+headshot: /people/saniya-kalra-z.jpg
 email: sk2797@cornell.edu
 major: Hotel Administration
 gradYear: 2027

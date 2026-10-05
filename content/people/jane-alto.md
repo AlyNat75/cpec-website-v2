@@ -2,7 +2,7 @@
 slug: jane-alto
 name: Jane Alto
 role: Member
-headshot: /people/jane.png
+headshot: /people/jane-alto-z.jpg
 email: jpa79@cornell.edu
 major: Industrial Labor Relations
 gradYear: 2027

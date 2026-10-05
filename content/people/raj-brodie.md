@@ -2,7 +2,7 @@
 slug: raj-brodie
 name: Raj Brodie
 role: Member
-headshot: /people/raj.png
+headshot: /people/raj-brodie-z.jpg
 email: rb947@cornell.edu
 major: Economics
 gradYear: 2028

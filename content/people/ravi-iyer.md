@@ -2,7 +2,7 @@
 slug: ravi-iyer
 name: Ravi Iyer
 role: Member
-headshot: /people/ravi-iyer-f26.jpg
+headshot: /people/ravi-iyer-z.jpg
 email: rai33@cornell.edu
 major: Dyson
 gradYear: 2029

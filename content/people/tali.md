@@ -2,8 +2,7 @@
 slug: tali-emuna
 name: Tali Emuna
 role: Member
-headshot: /people/tali.png
-headshotPosition: center 75%
+headshot: /people/tali-z.jpg
 email: tse28@cornell.edu
 major: Industrial Labor Relations
 gradYear: 2027

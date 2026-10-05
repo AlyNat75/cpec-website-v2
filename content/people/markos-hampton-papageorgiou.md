@@ -2,7 +2,7 @@
 slug: markos-hampton-papageorgiou
 name: Markos Hampton-Papageorgiou
 role: Member
-headshot: /people/markos-hampton-papageorgiou-f26.jpg
+headshot: /people/markos-hampton-papageorgiou-z.jpg
 email: mah542@cornell.edu
 major: History & Economics
 gradYear: 2029

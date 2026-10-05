@@ -2,7 +2,7 @@
 slug: hadley-earl
 name: Hadley Earl
 role: Member
-headshot: /people/hadley.png
+headshot: /people/hadley-earl-z.jpg
 email: hte8@cornell.edu
 major: Hotel Administration
 gradYear: 2028

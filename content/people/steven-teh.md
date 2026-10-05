@@ -2,7 +2,7 @@
 slug: steven-teh
 name: Steven Teh
 role: Member
-headshot: /people/steven-arch.jpg
+headshot: /people/steven-teh-z.jpg
 email: smt266@cornell.edu
 major: Dyson
 gradYear: 2027
