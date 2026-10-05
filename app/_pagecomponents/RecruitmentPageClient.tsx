@@ -27,8 +27,8 @@ const PROCESS_STEPS = [
   },
   {
     title: "Interview",
-    image: "/media/recruit-interview.jpg",
-    alt: "The CPEC executive board on the steps under a campus arch",
+    image: "/media/cpec_fullclub_f26.jpg",
+    alt: "CPEC members on the steps under a campus arch",
     body:
       "After you apply, selected candidates are invited to interview with our executive board. It's our chance to get to know you beyond your resume, including how you think, what drives you, and why private equity, and your chance to meet the people you'd be working alongside.",
   },
@@ -93,6 +93,22 @@ export default function RecruitmentPageClient() {
     <main className="min-h-screen bg-white">
       <NavBar forceSolid />
 
+      {/* Our Recruitment Process — two photo columns with a short explanation each */}
+      <section className="mx-auto w-full max-w-7xl px-6 pb-20 md:pb-28" style={{ paddingTop: "calc(var(--nav-height) + 4rem)" }}>
+        <h1 className="text-center text-4xl md:text-5xl font-normal text-[#161439]">Our Recruitment Process</h1>
+        <div className="mt-14 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-12">
+          {PROCESS_STEPS.map((step) => (
+            <div key={step.title} className="text-center">
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image src={step.image} alt={step.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              </div>
+              <h3 className="mt-8 text-3xl md:text-4xl font-normal uppercase tracking-wide text-[#161439]">{step.title}</h3>
+              <p className="mx-auto mt-4 max-w-xl text-lg md:text-xl leading-relaxed text-neutral-800">{step.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Recruitment Timeline — CIBC-style: photo background, events in a grid */}
       <section className="relative w-full overflow-hidden" ref={topRef}>
         <Image src={TIMELINE_BG} alt="" fill priority className="object-cover" sizes="100vw" />
@@ -103,9 +119,9 @@ export default function RecruitmentPageClient() {
             "relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 text-center text-white transition-all duration-700 ease-out md:pb-28",
             showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
           ].join(" ")}
-          style={{ paddingTop: "calc(var(--nav-height) + 4rem)" }}
+          style={{ paddingTop: "5rem" }}
         >
-          <h1 className="text-5xl md:text-7xl font-normal">Recruitment Timeline</h1>
+          <h2 className="text-5xl md:text-7xl font-normal">Recruitment Timeline</h2>
           <p className="mt-4 text-xl md:text-2xl text-white/85">Fall 2026</p>
 
           <div className="mt-16 grid grid-cols-1 gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
@@ -142,22 +158,6 @@ export default function RecruitmentPageClient() {
           <p className="mt-8 text-sm text-white/70">
             *Subject to change. Room details will be posted on our socials.
           </p>
-        </div>
-      </section>
-
-      {/* Our Recruitment Process — two photo columns with a short explanation each */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
-        <h2 className="text-center text-4xl md:text-5xl font-normal text-[#161439]">Our Recruitment Process</h2>
-        <div className="mt-14 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-12">
-          {PROCESS_STEPS.map((step) => (
-            <div key={step.title} className="text-center">
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
-                <Image src={step.image} alt={step.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-              </div>
-              <h3 className="mt-8 text-3xl md:text-4xl font-normal uppercase tracking-wide text-[#161439]">{step.title}</h3>
-              <p className="mx-auto mt-4 max-w-xl text-lg md:text-xl leading-relaxed text-neutral-800">{step.body}</p>
-            </div>
-          ))}
         </div>
       </section>
 
