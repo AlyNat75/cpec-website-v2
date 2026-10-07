@@ -1,11 +1,12 @@
 ---
 slug: will-he
 name: Will He
-role: Member
+role: Media Chair
 headshot: /people/will-he-z.jpg
 email: wzh3@cornell.edu
 major: Hotel Administration
 gradYear: 2029
+order: 15
 workExperience:
   - IA Financial/Richardson Wealth
 pastExperience: Intern & Interpreter at IA Financial / Richardson Wealth

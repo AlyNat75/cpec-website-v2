@@ -7,7 +7,7 @@ headshotPosition: center 75%
 email: ahw86@cornell.edu
 major: Dyson
 gradYear: 2028
-order: 7
+order: 3
 workExperience:
   - Incoming 2027 Investment Banking Summer Analyst at Jefferies
 pastExperience: StepStone Group

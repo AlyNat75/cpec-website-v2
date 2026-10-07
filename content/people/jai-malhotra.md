@@ -6,7 +6,7 @@ headshot: /people/jai-malhotra-f26.jpg
 email: jsm456@cornell.edu
 major: Economics & CS
 gradYear: 2028
-order: 1
+order: 2
 workExperience:
   - Incoming 2027 Investment Banking Summer Analyst at J.P. Morgan
 pastExperience: Paasa; Plum Alley Ventures

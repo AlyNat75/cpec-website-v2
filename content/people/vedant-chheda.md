@@ -6,7 +6,7 @@ headshot: /people/vedant-chheda-z3.jpg
 email: vc376@cornell.edu
 major: Economics
 gradYear: 2029
-order: 8
+order: 6
 workExperience:
   - Convergent Finance LLP
 pastExperience: Private Equity Summer Analyst at Convergent Finance LLP

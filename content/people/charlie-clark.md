@@ -6,7 +6,7 @@ headshot: /people/charlie-clark-z.jpg
 email: cac559@cornell.edu
 major: Dyson
 gradYear: 2029
-order: 13
+order: 14
 pastExperience: Distressed Hedge Fund
 campusInvolvements:
   - Cornell Daily Sun

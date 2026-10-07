@@ -6,7 +6,7 @@ headshot: /people/sophia2.jpeg
 email: sk3469@cornell.edu
 major: Dyson
 gradYear: 2029
-order: 12
+order: 9
 workExperience:
   - Hartz Capital
 pastExperience: Wealth Management at Hartz Capital

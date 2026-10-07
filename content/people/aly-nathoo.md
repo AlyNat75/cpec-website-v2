@@ -6,7 +6,7 @@ headshot: /people/aly.png
 email: an546@cornell.edu
 major: Computer Science
 gradYear: 2027
-order: 9
+order: 8
 workExperience:
   - Boston Consulting Group
 pastExperience: Summer Associate (TMT) at Boston Consulting Group

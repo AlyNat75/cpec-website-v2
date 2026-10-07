@@ -6,7 +6,7 @@ headshot: /people/saniya-kalra-z.jpg
 email: sk2797@cornell.edu
 major: Hotel Administration
 gradYear: 2027
-order: 14
+order: 13
 workExperience:
   - Lazard (PCA Real Assets)
 pastExperience: Lazard

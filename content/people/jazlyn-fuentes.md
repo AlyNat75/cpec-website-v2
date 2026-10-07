@@ -6,7 +6,7 @@ headshot: /people/jazlyn-fuentes-z.jpg
 email: jkf65@cornell.edu
 major: Dyson
 gradYear: 2029
-order: 10
+order: 11
 workExperience:
   - Plum Alley Ventures
 pastExperience: Venture Capital Summer Analyst at Plum Alley Ventures

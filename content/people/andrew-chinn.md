@@ -6,7 +6,7 @@ headshot: /people/andrew-chinn-z.jpg
 email: ahc264@cornell.edu
 major: Government
 gradYear: 2028
-order: 6
+order: 10
 workExperience:
   - Incoming 2027 Investment Banking Summer Analyst at Deutsche Bank
 pastExperience: M&A and Restructuring at PwC Corporate Finance
