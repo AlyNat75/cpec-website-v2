@@ -6,7 +6,7 @@ headshot: /people/cade-wright-f26.jpg
 email: cbw85@cornell.edu
 major: Engineering
 gradYear: 2029
-order: 5
+order: 4
 pastExperience: LWYRD
 campusInvolvements:
   - Army ROTC
