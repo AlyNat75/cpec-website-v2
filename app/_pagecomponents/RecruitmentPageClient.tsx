@@ -28,8 +28,8 @@ const PROCESS_STEPS = [
   },
   {
     title: "Interview",
-    image: "/media/recruit-interview-6.jpg",
-    alt: "Five CPEC members in business attire under a stone archway",
+    image: "/media/recruit-interview-7.jpg",
+    alt: "A group of CPEC members in business attire under a stone archway",
     body:
       "After you apply, selected candidates are invited to interview with our members. It's our chance to get to know you beyond your resume, including how you think, what drives you, and why private equity, and your chance to meet the people you'd be working alongside.",
   },
