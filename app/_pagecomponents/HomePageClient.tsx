@@ -144,35 +144,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2026 NYC Trek — firms visited plus a photo grid */}
-      <section className="bg-black text-white">
-        <div className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
-          <h2 className="text-center text-4xl md:text-6xl font-normal tracking-wide">2026 NYC Trek</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-center text-lg md:text-xl leading-relaxed text-white/85">
+      {/* 2026 NYC Trek — white section, full-width scrolling logo strip, photo grid */}
+      <section className="bg-white text-neutral-900">
+        <div className="mx-auto w-full max-w-7xl px-6 pt-20 md:pt-28">
+          <h2 className="text-center text-4xl md:text-6xl font-normal tracking-wide text-[#161439]">2026 NYC Trek</h2>
+          <p className="mx-auto mt-6 max-w-3xl text-center text-lg md:text-xl leading-relaxed text-neutral-700">
             On October 13–14, CPEC members spent two days in New York meeting with investment bankers and private
             equity, private credit, and real estate investors, and seeing firsthand how deals get done.
           </p>
+        </div>
 
-          {/* "Where we visited" strip: logos when available, otherwise the firm name */}
-          <div className="mt-12 rounded-sm bg-white px-6 py-12 text-neutral-900">
-            <p className="text-center text-base md:text-lg uppercase tracking-[0.3em] text-neutral-700">Where We Visited</p>
-            {/* One line that scrolls forever: the list is drawn twice and slides left by half its width */}
-            <div className="trek-marquee mt-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
-              <ul className="trek-marquee-track flex w-max items-center">
-                {[...TREK_FIRMS, ...TREK_FIRMS].map((firm, i) => (
-                  <li key={`${firm.name}-${i}`} aria-hidden={i >= TREK_FIRMS.length} className="flex h-20 shrink-0 items-center px-8 md:px-12">
-                    {firm.logo ? (
-                      <Image src={firm.logo} alt={firm.name} width={260} height={80} className="h-14 md:h-16 w-auto max-w-[240px] object-contain" />
-                    ) : (
-                      <span className="whitespace-nowrap text-lg md:text-xl font-bold uppercase tracking-wider">{firm.name}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        {/* "Where we visited" strip spans the full page width */}
+        <div className="mt-14 w-full py-10">
+          <p className="text-center text-base md:text-lg uppercase tracking-[0.3em] text-neutral-700">Where We Visited</p>
+        {/* One line that scrolls forever: the list is drawn twice and slides left by half its width */}
+        <div className="trek-marquee mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+          <ul className="trek-marquee-track flex w-max items-center">
+            {[...TREK_FIRMS, ...TREK_FIRMS].map((firm, i) => (
+              <li key={`${firm.name}-${i}`} aria-hidden={i >= TREK_FIRMS.length} className="flex h-20 shrink-0 items-center px-8 md:px-12">
+                {firm.logo ? (
+                  <Image src={firm.logo} alt={firm.name} width={260} height={80} className="h-14 md:h-16 w-auto max-w-[240px] object-contain" />
+                ) : (
+                  <span className="whitespace-nowrap text-lg md:text-xl font-bold uppercase tracking-wider">{firm.name}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        </div>
 
-          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6">
+        <div className="mx-auto w-full max-w-7xl px-6 pb-20 md:pb-28">
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6">
             {TREK_PHOTOS.map((photo) => (
               <div key={photo.src} className="relative aspect-[4/3] overflow-hidden">
                 <Image src={photo.src} alt={photo.alt} fill className="object-cover" sizes="(max-width: 640px) 100vw, 50vw" />
