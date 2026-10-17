@@ -25,3 +25,8 @@ body {
 h1, h2, h3, h4, h5, h6,
 .font-heading { font-family: var(--font-body), Garamond, Georgia, serif; }
 .font-body { font-family: var(--font-body), Garamond, Georgia, serif; }
+
+/* Scrolling logo strip (home page NYC Trek) */
+@keyframes trek-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.trek-marquee-track { animation: trek-marquee 35s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .trek-marquee-track { animation: none; } }

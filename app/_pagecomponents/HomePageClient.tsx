@@ -25,16 +25,16 @@ const ABOUT_COLUMNS = [
   },
 ];
 
-// Add a logo path to a firm (e.g. "/trek/blackstone.png") and it replaces the name in the strip
+// A firm with a logo shows the logo in the strip; without one it shows the name
 const TREK_FIRMS: { name: string; logo?: string }[] = [
-  { name: "Blackstone" },
-  { name: "Centerbridge Partners" },
-  { name: "Audax Strategic Capital" },
-  { name: "Barclays" },
-  { name: "Canyon Partners" },
-  { name: "General Atlantic" },
+  { name: "Blackstone", logo: "/media/trek/logos/blackstone.png" },
+  { name: "Centerbridge Partners", logo: "/media/trek/logos/centerbridge.png" },
+  { name: "Audax Strategic Capital", logo: "/media/trek/logos/audax.png" },
+  { name: "Barclays", logo: "/media/trek/logos/barclays.png" },
+  { name: "Canyon Partners", logo: "/media/trek/logos/canyon.png" },
+  { name: "General Atlantic", logo: "/media/trek/logos/general-atlantic.png" },
   { name: "Man Varagon" },
-  { name: "Simpson Thacher & Bartlett" },
+  { name: "Simpson Thacher & Bartlett", logo: "/media/trek/logos/simpson-thacher.png" },
 ]
 
 const TREK_PHOTOS = [
@@ -154,19 +154,22 @@ export default function HomePage() {
           </p>
 
           {/* "Where we visited" strip: logos when available, otherwise the firm name */}
-          <div className="mt-12 rounded-sm bg-[#f5f5f5] px-6 py-10 text-neutral-900">
+          <div className="mt-12 rounded-sm bg-white px-6 py-12 text-neutral-900">
             <p className="text-center text-base md:text-lg uppercase tracking-[0.3em] text-neutral-700">Where We Visited</p>
-            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-              {TREK_FIRMS.map((firm) => (
-                <li key={firm.name} className="flex h-14 items-center">
-                  {firm.logo ? (
-                    <Image src={firm.logo} alt={firm.name} width={200} height={56} className="h-12 w-auto object-contain" />
-                  ) : (
-                    <span className="whitespace-nowrap text-lg md:text-xl font-bold uppercase tracking-wider">{firm.name}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
+            {/* One line that scrolls forever: the list is drawn twice and slides left by half its width */}
+            <div className="trek-marquee mt-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+              <ul className="trek-marquee-track flex w-max items-center">
+                {[...TREK_FIRMS, ...TREK_FIRMS].map((firm, i) => (
+                  <li key={`${firm.name}-${i}`} aria-hidden={i >= TREK_FIRMS.length} className="flex h-20 shrink-0 items-center px-8 md:px-12">
+                    {firm.logo ? (
+                      <Image src={firm.logo} alt={firm.name} width={260} height={80} className="h-14 md:h-16 w-auto max-w-[240px] object-contain" />
+                    ) : (
+                      <span className="whitespace-nowrap text-lg md:text-xl font-bold uppercase tracking-wider">{firm.name}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6">
