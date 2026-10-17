@@ -13,11 +13,13 @@ type Props = {
   titlePlacement?: "center" | "top";
   /** Taller banner shows more of a tall group photo (less zoomed in) */
   tall?: boolean;
+  /** Size the banner to the photo's own shape (e.g. "1232 / 620") so the whole image shows */
+  aspectRatio?: string;
 };
 
-export default function Banner({ title, subtitle, imageSrc = "/media/hero-poster.jpg", titleClassName, imagePosition = "center", titlePlacement = "center", tall = false }: Props) {
+export default function Banner({ title, subtitle, imageSrc = "/media/hero-poster.jpg", titleClassName, imagePosition = "center", titlePlacement = "center", tall = false, aspectRatio }: Props) {
   return (
-    <section className="relative w-full overflow-hidden" style={tall ? { height: "72vh", minHeight: "420px", maxHeight: "760px" } : { height: "46vh", minHeight: "320px", maxHeight: "520px" }}>
+    <section className="relative w-full overflow-hidden" style={aspectRatio ? { aspectRatio, minHeight: "320px" } : tall ? { height: "72vh", minHeight: "420px", maxHeight: "760px" } : { height: "46vh", minHeight: "320px", maxHeight: "520px" }}>
       <Image src={imageSrc} alt="Banner image" fill priority className="object-cover brightness-[.7]" style={{ objectPosition: imagePosition }} />
       <div className="absolute inset-0 bg-linear-to-t from-black/35 to-transparent" />
       <div className={`relative z-10 flex h-full flex-col items-center px-4 text-center ${titlePlacement === "top" ? "justify-start pt-[calc(var(--nav-height)+1.25rem)]" : "justify-center"}`}>
