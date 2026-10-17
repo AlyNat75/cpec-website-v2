@@ -30,7 +30,7 @@ const TREK_FIRMS = [
   "Barclays",
   "Canyon Partners",
   "Man Varagon",
-  "Blackstone Real Estate",
+  "Blackstone",
   "Centerbridge Partners",
   "Audax Strategic Capital",
   "General Atlantic",
