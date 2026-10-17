@@ -148,13 +148,13 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
           <h2 className="text-center text-4xl md:text-6xl font-normal tracking-wide">2026 NYC Trek</h2>
           <p className="mx-auto mt-6 max-w-3xl text-center text-lg md:text-xl leading-relaxed text-white/85">
-            On October 13–14, CPEC members spent two days in New York meeting with investors, bankers, and lawyers
-            across private equity, credit, real estate, and growth investing, and seeing firsthand how deals get done.
+            On October 13–14, CPEC members spent two days in New York meeting with investment bankers and private
+            equity, private credit, and real estate investors, and seeing firsthand how deals get done.
           </p>
 
           <ul className="mx-auto mt-10 flex max-w-5xl flex-wrap justify-center gap-x-8 gap-y-3 text-lg md:text-xl">
             {TREK_FIRMS.map((firm) => (
-              <li key={firm} className="whitespace-nowrap border-b border-white/30 pb-1">{firm}</li>
+              <li key={firm} className="whitespace-nowrap border-b border-white/30 pb-1 font-bold uppercase tracking-wider">{firm}</li>
             ))}
           </ul>
 
