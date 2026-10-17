@@ -25,16 +25,17 @@ const ABOUT_COLUMNS = [
   },
 ];
 
-const TREK_FIRMS = [
-  "Simpson Thacher & Bartlett",
-  "Barclays",
-  "Canyon Partners",
-  "Man Varagon",
-  "Blackstone",
-  "Centerbridge Partners",
-  "Audax Strategic Capital",
-  "General Atlantic",
-];
+// Add a logo path to a firm (e.g. "/trek/blackstone.png") and it replaces the name in the strip
+const TREK_FIRMS: { name: string; logo?: string }[] = [
+  { name: "Blackstone" },
+  { name: "Centerbridge Partners" },
+  { name: "Audax Strategic Capital" },
+  { name: "Barclays" },
+  { name: "Canyon Partners" },
+  { name: "General Atlantic" },
+  { name: "Man Varagon" },
+  { name: "Simpson Thacher & Bartlett" },
+]
 
 const TREK_PHOTOS = [
   { src: "/media/trek/trek-1.jpg", alt: "CPEC members outside Barclays in New York" },
@@ -144,7 +145,7 @@ export default function HomePage() {
       </section>
 
       {/* 2026 NYC Trek — firms visited plus a photo grid */}
-      <section className="bg-[#0f2242] text-white">
+      <section className="bg-black text-white">
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
           <h2 className="text-center text-4xl md:text-6xl font-normal tracking-wide">2026 NYC Trek</h2>
           <p className="mx-auto mt-6 max-w-3xl text-center text-lg md:text-xl leading-relaxed text-white/85">
@@ -152,11 +153,21 @@ export default function HomePage() {
             equity, private credit, and real estate investors, and seeing firsthand how deals get done.
           </p>
 
-          <ul className="mx-auto mt-10 flex max-w-5xl flex-wrap justify-center gap-x-8 gap-y-3 text-lg md:text-xl">
-            {TREK_FIRMS.map((firm) => (
-              <li key={firm} className="whitespace-nowrap border-b border-white/30 pb-1 font-bold uppercase tracking-wider">{firm}</li>
-            ))}
-          </ul>
+          {/* "Where we visited" strip: logos when available, otherwise the firm name */}
+          <div className="mt-12 rounded-sm bg-[#f5f5f5] px-6 py-10 text-neutral-900">
+            <p className="text-center text-base md:text-lg uppercase tracking-[0.3em] text-neutral-700">Where We Visited</p>
+            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+              {TREK_FIRMS.map((firm) => (
+                <li key={firm.name} className="flex h-14 items-center">
+                  {firm.logo ? (
+                    <Image src={firm.logo} alt={firm.name} width={200} height={56} className="h-12 w-auto object-contain" />
+                  ) : (
+                    <span className="whitespace-nowrap text-lg md:text-xl font-bold uppercase tracking-wider">{firm.name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6">
             {TREK_PHOTOS.map((photo) => (
