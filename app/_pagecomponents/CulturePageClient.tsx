@@ -10,7 +10,7 @@ import Footer from "../_components/Footer";
 const PHOTOS: { src: string; alt: string; zoom?: number; position?: string }[] = [
   { src: "/media/culture/culture-dinner.jpg", alt: "CPEC members at an outdoor dinner" },
   { src: "/media/culture/culture-arches-trio.jpg", alt: "CPEC members under the arches" },
-  { src: "/media/culture/culture-boardroom.jpg", alt: "CPEC members at a boardroom table overlooking Manhattan", zoom: 1.06, position: "48% 70%" },
+  { src: "/media/culture/culture-boardroom-2.jpg", alt: "CPEC members at a boardroom table overlooking Manhattan" },
   { src: "/media/culture/culture-bar.jpg", alt: "CPEC members out for dinner" },
   { src: "/media/culture/culture-ski.jpg", alt: "CPEC members on a ski trip" },
   { src: "/media/culture/culture-group-night.jpg", alt: "CPEC members at a night out" },
