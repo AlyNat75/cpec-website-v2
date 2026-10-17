@@ -93,7 +93,7 @@ export default function RecruitmentPageClient() {
   return (
     <main className="min-h-screen bg-white">
       <NavBar forceSolid />
-      <Banner title="Recruitment" imageSrc="/media/recruitment-banner-bull-2.jpg" imagePosition="center bottom" titlePlacement="top" aspectRatio="1232 / 620" titleClassName="text-4xl md:text-6xl" />
+      <Banner title="Recruitment" imageSrc="/media/recruitment-banner-bull-2.jpg" imagePosition="center 30%" aspectRatio="1232 / 380" titlePlacement="top" titleClassName="text-4xl md:text-6xl" />
 
       {/* Our Recruitment Process — two photo columns with a short explanation each */}
       <section className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
