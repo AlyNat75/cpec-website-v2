@@ -21,8 +21,26 @@ const ABOUT_COLUMNS = [
   {
     title: "Opportunities",
     body:
-      "Connecting members with opportunities to explore careers and gain real-world experience in private equity. Through speaker sessions, alumni, industry events, recruiting resources, and experiential opportunities, CPEC helps members build meaningful connections and navigate pathways into private equity and related fields. This year we are excited to announce our first NYC trek, where we visit prestigious firms.",
+      "Connecting members with opportunities to explore careers and gain real-world experience in private equity. Through speaker sessions, alumni, industry events, recruiting resources, and experiential opportunities, CPEC helps members build meaningful connections and navigate pathways into private equity and related fields. In October 2026, members visited eight leading firms on our first NYC trek.",
   },
+];
+
+const TREK_FIRMS = [
+  "Simpson Thacher & Bartlett",
+  "Barclays",
+  "Canyon Partners",
+  "Man Varagon",
+  "Blackstone Real Estate",
+  "Centerbridge Partners",
+  "Audax Strategic Capital",
+  "General Atlantic",
+];
+
+const TREK_PHOTOS = [
+  { src: "/media/trek/trek-1.jpg", alt: "CPEC members outside Barclays in New York" },
+  { src: "/media/trek/trek-2.jpg", alt: "CPEC members in a conference room overlooking Manhattan" },
+  { src: "/media/trek/trek-3.jpg", alt: "CPEC members at a boardroom table during the NYC trek" },
+  { src: "/media/trek/trek-4.jpg", alt: "CPEC members at Centerbridge Partners" },
 ];
 
 export default function HomePage() {
@@ -60,14 +78,14 @@ export default function HomePage() {
 
       {/* Who We Are — CIBC-style: photo left, text right, full-width button */}
       <section id="about" ref={aboutRef} className="mx-auto w-full max-w-[90rem] px-6 py-20 md:py-28 scroll-mt-12 md:scroll-mt-18">
-        <div className={["grid grid-cols-1 md:grid-cols-[1.35fr_1fr] gap-10 md:gap-14 items-center transition-all duration-700 ease-out", showAbout ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
-          <div className="relative aspect-4/3 overflow-hidden">
+        <div className={["grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center transition-all duration-700 ease-out", showAbout ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"].join(" ") }>
+          <div className="relative aspect-[16/10] overflow-hidden rounded-lg shadow-lg">
             <Image
               src="/media/cpec_fullclub_f26.jpg"
               alt="CPEC members outside an iconic Cornell archway"
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 60vw"
+              sizes="(max-width: 768px) 100vw, 45vw"
             />
           </div>
 
@@ -122,6 +140,31 @@ export default function HomePage() {
               <p className="mt-8 text-lg leading-relaxed text-neutral-800">{col.body}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* 2026 NYC Trek — firms visited plus a photo grid */}
+      <section className="bg-[#0f2242] text-white">
+        <div className="mx-auto w-full max-w-7xl px-6 py-20 md:py-28">
+          <h2 className="text-center text-4xl md:text-6xl font-normal tracking-wide">2026 NYC Trek</h2>
+          <p className="mx-auto mt-6 max-w-3xl text-center text-lg md:text-xl leading-relaxed text-white/85">
+            On October 13–14, CPEC members spent two days in New York meeting with investors, bankers, and lawyers
+            across private equity, credit, real estate, and growth investing, and seeing firsthand how deals get done.
+          </p>
+
+          <ul className="mx-auto mt-10 flex max-w-5xl flex-wrap justify-center gap-x-8 gap-y-3 text-lg md:text-xl">
+            {TREK_FIRMS.map((firm) => (
+              <li key={firm} className="whitespace-nowrap border-b border-white/30 pb-1">{firm}</li>
+            ))}
+          </ul>
+
+          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6">
+            {TREK_PHOTOS.map((photo) => (
+              <div key={photo.src} className="relative aspect-[4/3] overflow-hidden">
+                <Image src={photo.src} alt={photo.alt} fill className="object-cover" sizes="(max-width: 640px) 100vw, 50vw" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
