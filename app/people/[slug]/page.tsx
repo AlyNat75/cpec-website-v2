@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <h1 className="text-5xl lg:text-6xl font-normal text-[#161439]">{person.name}</h1>
 
             {person.workExperience && person.workExperience.length > 0 ? (
-              <p className="mt-3 text-xl md:text-2xl font-semibold text-[#e2703a]">{person.workExperience[0]}</p>
+              <p className="mt-3 text-xl md:text-2xl font-semibold text-[#D61F26]">{person.workExperience[0]}</p>
             ) : null}
 
             {/* CIBC-style: highlighted heading on its own line, value underneath */}
