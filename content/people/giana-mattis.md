@@ -7,8 +7,8 @@ email: gim23@cornell.edu
 major: Dyson
 gradYear: 2027
 workExperience:
-  - J.P. Morgan
-pastExperience: Investment Banking Analyst at J.P. Morgan (2026); Private Equity Summer Analyst at Odyssey Investment Partners (2025)
+  - Incoming Analyst at J.P. Morgan
+pastExperience: Investment Banking Summer Analyst at J.P. Morgan
 campusInvolvements:
   - Cornell Financial Analysts
   - BlackGen Capital (VP of Recruitment)
