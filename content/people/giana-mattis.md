@@ -7,7 +7,7 @@ email: gim23@cornell.edu
 major: Dyson
 gradYear: 2027
 workExperience:
-  - Incoming Analyst at J.P. Morgan
+  - Incoming Investment Banking Analyst at J.P. Morgan
 pastExperience: Investment Banking Summer Analyst at J.P. Morgan
 campusInvolvements:
   - Cornell Financial Analysts
