@@ -8,7 +8,7 @@ major: Hotel Administration
 gradYear: 2027
 order: 13
 workExperience:
-  - Lazard (PCA Real Assets)
+  - Incoming Analyst at Lazard
 pastExperience: Lazard
 campusInvolvements:
   - Hotel Ezra
