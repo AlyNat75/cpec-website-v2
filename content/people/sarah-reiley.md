@@ -8,7 +8,7 @@ major: Industrial Labor Relations
 gradYear: 2027
 order: 7
 workExperience:
-  - Wells Fargo
+  - Incoming Analyst at Lazard
 pastExperience: Wells Fargo (2026); Tungsten Partners (2025)
 campusInvolvements:
   - Society for Women in Business
