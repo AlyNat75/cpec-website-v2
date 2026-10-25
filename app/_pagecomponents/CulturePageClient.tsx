@@ -15,7 +15,7 @@ const PHOTOS: { src: string; alt: string; zoom?: number; position?: string }[] =
   { src: "/media/culture/culture-ski.jpg", alt: "CPEC members on a ski trip" },
   { src: "/media/culture/culture-group-night.jpg", alt: "CPEC members at a night out" },
   { src: "/media/culture/culture-arch-window.jpg", alt: "CPEC members in suits on campus", zoom: 1.25 },
-  { src: "/media/culture/culture-halloween.jpg", alt: "CPEC members in Halloween costumes" },
+  { src: "/media/culture/culture-tennis.jpg", alt: "CPEC members playing tennis", position: "center 40%" },
   { src: "/media/culture/culture-selfie.jpg", alt: "CPEC members out together" },
 ];
 
