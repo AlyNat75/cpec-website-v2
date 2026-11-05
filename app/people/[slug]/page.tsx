@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllPeople, getPersonBySlug } from "../../_lib/people";
 import NavBar from "../../_components/NavBar";
+import ProfileTransitionReveal from "../../_components/ProfileTransitionReveal";
 
 export const revalidate = 3600;
 
@@ -32,6 +33,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <main>
+      <ProfileTransitionReveal />
       <NavBar forceSolid />
 
       {/* Extra top spacing below navbar */}
