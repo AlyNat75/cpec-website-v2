@@ -42,8 +42,9 @@ export default function CulturePageClient() {
       <NavBar forceSolid />
       <Banner
         title="CPECulture"
-        imageSrc="/media/culture/culture-banner.jpg"
-        titleClassName="normal-case text-4xl md:text-6xl"
+        imageSrc="/media/culture/culture-banner-nyc-clean.png"
+        imagePosition="center 48%"
+        titleClassName="text-4xl md:text-6xl"
       />
 
       {/* Large photo grid: three across, nearly full page width */}

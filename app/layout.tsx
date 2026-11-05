@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { EB_Garamond } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import SiteLoader from "./_components/SiteLoader";
 
 // Garamond for everything: headings and body text
 const garamond = EB_Garamond({
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${garamond.variable} antialiased`}>
+        <SiteLoader />
         {children}
         <Analytics /> 
       </body>

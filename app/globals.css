@@ -30,3 +30,104 @@ h1, h2, h3, h4, h5, h6,
 @keyframes trek-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .trek-marquee-track { animation: trek-marquee 35s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .trek-marquee-track { animation: none; } }
+
+/* Initial site loader */
+.cpec-site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: #161439;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 450ms ease, visibility 450ms ease;
+}
+
+.cpec-site-loader.is-exiting {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cpec-site-loader__inner {
+  width: min(390px, 68vw);
+}
+
+.cpec-site-loader__inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cpec-site-loader__track {
+  width: 66%;
+  height: 2px;
+  margin: 24px auto 0;
+  overflow: hidden;
+  background: rgb(255 255 255 / 22%);
+}
+
+.cpec-site-loader__track span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #d61f26;
+  transform: translateX(-100%);
+  animation: cpec-loader-progress 1s cubic-bezier(.65, 0, .35, 1) forwards;
+}
+
+@keyframes cpec-loader-progress {
+  to { transform: translateX(0); }
+}
+
+/* Members grid -> individual profile transition */
+.cpec-member-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #161439;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.cpec-member-transition img {
+  width: min(390px, 68vw);
+  height: auto;
+}
+
+.cpec-member-transition.is-entering {
+  transform: translateX(-100%);
+  animation: cpec-panel-enter 520ms cubic-bezier(.76, 0, .24, 1) forwards;
+}
+
+.cpec-member-transition.is-covered {
+  transform: translateX(0);
+}
+
+.cpec-member-transition.is-revealing {
+  animation: cpec-panel-reveal 620ms cubic-bezier(.76, 0, .24, 1) forwards;
+}
+
+@keyframes cpec-panel-enter {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes cpec-panel-reveal {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cpec-site-loader,
+  .cpec-member-transition {
+    display: none !important;
+  }
+
+  .cpec-site-loader__track span {
+    animation: none;
+  }
+}
