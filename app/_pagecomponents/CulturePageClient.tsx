@@ -10,13 +10,13 @@ import Footer from "../_components/Footer";
 const PHOTOS: { src: string; alt: string; zoom?: number; position?: string }[] = [
   { src: "/media/culture/culture-dinner.jpg", alt: "CPEC members at an outdoor dinner" },
   { src: "/media/culture/culture-boardroom-3.jpg", alt: "CPEC members at a boardroom table overlooking Manhattan" },
-  { src: "/media/culture/culture-arches-trio.jpg", alt: "CPEC members under the arches" },
   { src: "/media/culture/culture-bar.jpg", alt: "CPEC members out for dinner" },
   { src: "/media/culture/culture-ski.jpg", alt: "CPEC members on a ski trip" },
   { src: "/media/culture/culture-group-night.jpg", alt: "CPEC members at a night out" },
   { src: "/media/culture/culture-arch-window.jpg", alt: "CPEC members in suits on campus", zoom: 1.25 },
   { src: "/media/culture/culture-tennis.jpg", alt: "CPEC members playing tennis", position: "center 40%" },
   { src: "/media/culture/culture-selfie.jpg", alt: "CPEC members out together" },
+  { src: "/media/culture/culture-arches-trio.jpg", alt: "CPEC members under the arches" },
 ];
 
 export default function CulturePageClient() {
