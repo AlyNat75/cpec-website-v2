@@ -2,7 +2,7 @@
 slug: om-shrikam
 name: Om Shrikam
 role: Member
-headshot: /people/om-shrikam-z.jpg
+headshot: /people/om.png
 email: ols22@cornell.edu
 major: Hotel Administration
 gradYear: 2028
